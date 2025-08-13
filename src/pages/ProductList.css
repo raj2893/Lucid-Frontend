@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5fdfb 0%, #e6f7f4 100%);
+  background-attachment: fixed;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* Floating small molecules */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -2;
+  pointer-events: none;
+  animation: drift 60s linear infinite;
+  background-image:
+    radial-gradient(circle, rgba(0,150,136,0.15) 8px, transparent 8px),
+    radial-gradient(circle, rgba(0,188,212,0.12) 5px, transparent 5px);
+  background-size: 300px 300px, 450px 450px;
+  background-position: 0 0, 150px 200px;
+}
+
+/* Large faint rotating molecules */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(0,150,136,0.08) 60px, transparent 60px),
+    radial-gradient(circle, rgba(0,188,212,0.06) 80px, transparent 80px),
+    radial-gradient(circle, rgba(0,150,136,0.05) 100px, transparent 100px);
+  background-size: 800px 800px, 1000px 1000px, 1200px 1200px;
+  background-position: 100px 200px, 500px 600px, 800px 300px;
+  animation: rotateMolecules 200s linear infinite;
+}
+
+@keyframes drift {
+  0% {
+    background-position: 0 0, 150px 200px;
+  }
+  50% {
+    background-position: 40px 30px, 190px 240px;
+  }
+  100% {
+    background-position: 0 0, 150px 200px;
+  }
+}
+
+@keyframes rotateMolecules {
+  0% {
+    background-position: 100px 200px, 500px 600px, 800px 300px;
+    transform: rotate(0deg);
+  }
+  50% {
+    background-position: 150px 250px, 550px 650px, 850px 350px;
+    transform: rotate(180deg);
+  }
+  100% {
+    background-position: 100px 200px, 500px 600px, 800px 300px;
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.product-list {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.category-btn {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.product-list-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #03396c;
+}
+
+.product-subtitle {
+  font-size: 1rem;
+  color: #055c9d;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #005f8c;
+}
+
+.filters-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-dropdown {
+  padding: 10px 14px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 14px;
+  font-family: inherit;
+  color: #03396c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  outline: none;
+  min-width: 160px;
+}
+
+.filter-dropdown:hover {
+  border-color: #c5f7da;
+  box-shadow: 0 3px 8px rgba(141, 225, 194, 0.35);
+}
+
+.filter-dropdown:focus {
+  border-color: #c5f7da;
+  box-shadow: 0 3px 10px rgba(141, 225, 194, 0.5);
+}
+
+.filter-dropdown option {
+  padding: 10px;
+}
