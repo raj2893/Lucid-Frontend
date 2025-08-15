@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchProductById } from '../api/productApi';
+import productsData from '../data/products.json';
 import ProductCard from '../components/ProductCard';
 
 const ProductDetail = () => {
@@ -8,9 +8,8 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetchProductById(id)
-      .then(res => setProduct(res.data))
-      .catch(err => console.error(err));
+    const foundProduct = productsData.find(p => String(p.id) === String(id));
+    setProduct(foundProduct || null);
   }, [id]);
 
   return (

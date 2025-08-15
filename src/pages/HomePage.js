@@ -52,7 +52,7 @@ const HomePage = () => {
       </div>
 
       <header className="hero-section">
-        <h1>Lucid Pharmaceuticals</h1>
+        <h1>LUCID PHARMATECH</h1>
         <p>Innovating healthcare with precision, quality, and trust.</p>
         <Link to="/products" className="cta-button">View Our Products</Link>
       </header>
@@ -60,14 +60,14 @@ const HomePage = () => {
       <section className="about-section">
         <h2>About Us</h2>
         <p>
-          At Lucid Pharmaceuticals, we are dedicated to delivering high-quality medicines
+          At Lucid Pharmatech, we are dedicated to delivering high-quality medicines
           that improve lives. With a commitment to research, innovation, and safety,
           we serve healthcare professionals and patients with excellence.
         </p>
       </section>
 
       <footer className="footer">
-        <p>© {new Date().getFullYear()} Lucid Pharmaceuticals. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Lucid Pharmatech. All rights reserved.</p>
       </footer>
     </div>
   );
