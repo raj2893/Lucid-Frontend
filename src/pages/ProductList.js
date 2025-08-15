@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchAllProducts } from '../api/productApi';
+import productsData from '../data/products.json';
 import ProductCard from '../components/ProductCard';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
@@ -13,20 +13,21 @@ const ProductList = () => {
   const [allTypes, setAllTypes] = useState([]);
 
   useEffect(() => {
-    fetchAllProducts(selectedCategory, selectedType)
-      .then(res => {
-        const productList = res.data.results || res.data;
-        setProducts(productList);
-
-        // Populate dropdown options from fetched data
-        if (selectedCategory === 'All' && selectedType === 'All') {
-          const categories = ['All', ...new Set(productList.map(p => p.category).filter(Boolean))];
-          const types = ['All', ...new Set(productList.map(p => p.type).filter(Boolean))];
-          setAllCategories(categories);
-          setAllTypes(types);
-        }
-      })
-      .catch(err => console.error(err));
+    let filteredProducts = productsData;
+    if (selectedCategory !== 'All') {
+      filteredProducts = filteredProducts.filter(p => p.category === selectedCategory);
+    }
+    if (selectedType !== 'All') {
+      filteredProducts = filteredProducts.filter(p => p.type === selectedType);
+    }
+    setProducts(filteredProducts);
+ 
+    if (allCategories.length === 0 && allTypes.length === 0) {
+      const categories = ['All', ...new Set(productsData.map(p => p.category).filter(Boolean))];
+      const types = ['All', ...new Set(productsData.map(p => p.type).filter(Boolean))];
+      setAllCategories(categories);
+      setAllTypes(types);
+    }
   }, [selectedCategory, selectedType]);
 
   return (
