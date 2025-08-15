@@ -4,9 +4,6 @@ import { AuthProvider } from './context/AuthContext';
 import ProductList from './pages/ProductList';
 import ProductDetail from './pages/ProductDetail';
 import HomePage from './pages/HomePage';
-import AdminLogin from './pages/AdminLogin';
-import AdminDashboard from './pages/AdminDashboard';
-import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
