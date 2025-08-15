@@ -55,3 +55,34 @@
   z-index: 1;
   position: relative;
 }
+
+/* --- MOBILE STYLES (finalized for 2 per row) --- */
+@media (max-width: 1024px) {
+  .product-card {
+    width: calc(33.33% - 20px); /* 3 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(48% - 10px); /* 2 per row, slightly smaller for breathing room */
+    margin: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: calc(48% - 10px); /* Keep 2 per row even on small phones */
+    margin: 6px;
+  }
+
+  .product-card h2 {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .product-card p {
+    font-size: 11px;
+  }
+}
+
