@@ -1,22 +1,103 @@
 [
   {
     "id": 1,
-    "name": "Fresholite Vitamin-C Facewash",
-    "composition": "Vitamin C",
-    "box_size": "30",
-    "mrp": 120,
-    "type": "Facewash",
-    "category": "Cosmetic",
-    "image_url": "https://pub-dcb43482abba4045bfe1effe51b32ae8.r2.dev/3.png"
+    "name": "AGICARD-AT",
+    "composition": "AMLODIPINE BESILATE IP, EQV. TO AMLODIPINE - 5mg, ATENOLO IP - 50mg",
+    "box_size": "20x14 TABS.",
+    "mrp": "79.50/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
   },
   {
     "id": 2,
-    "name": "Fresholite Vitamin-C Facewash",
-    "composition": "Vitamin C",
-    "box_size": "30",
-    "mrp": 120,
-    "type": "Facewash",
-    "category": "Cosmetic",
-    "image_url": "https://pub-dcb43482abba4045bfe1effe51b32ae8.r2.dev/3.png"
+    "name": "AMILINE 10",
+    "composition": "AMITRIPTYLINE 10mg",
+    "box_size": "20 x 10 TABS.",
+    "mrp": "26.65/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 3,
+    "name": "AMILINE 25",
+    "composition": "AMITRIPTYLINE 25mg",
+    "box_size": "20 x 10 TABS.",
+    "mrp": "27.87/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 4,
+    "name": "ATRAIL 10",
+    "composition": "HYDROXIZINE 10mg",
+    "box_size": "30 x 15 TABS.",
+    "mrp": "45/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 5,
+    "name": "ATRAIL 25",
+    "composition": "HYDROXIZINE 25mg",
+    "box_size": "30 x 15 TABS.",
+    "mrp": "67/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 6,
+    "name": "AZIBIT - 250",
+    "composition": "AZITHROMYCIN (AS DIHYDRATE) IP EQ. TO AZITHROMYCIN ANHYDROUS 250mg",
+    "box_size": "20 X 1 X 6",
+    "mrp": "79.74/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 7,
+    "name": "AZIBIT - 500",
+    "composition": "AZITHROMYCIN (AS DIHYDRATE) IP EQ. TO AZITHROMYCIN ANHYDROUS 500mg",
+    "box_size": "20 X 1 X 5",
+    "mrp": "134.25/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 8,
+    "name": "AMOXILINE - 625 DUO",
+    "composition": "AMOXYCILLIN & POTASSIUM CLAVULANATE TABLETS I.P.",
+    "box_size": "20 X 6 TABS.",
+    "mrp": "122.9/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 9,
+    "name": "BRIVALITE 50",
+    "composition": "BRIVARACETAM TABLETS IP 50mg",
+    "box_size": "10 x 10 TABS.",
+    "mrp": "400/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
+  },
+  {
+    "id": 10,
+    "name": "BACTAPOD-O",
+    "composition": "CEFPODOXIME & OFLOXACIN TABLETS",
+    "box_size": "10 x 1 X 10 TABS.",
+    "mrp": "300/- STRIP",
+    "type": "TABLET",
+    "category": "TABLETS",
+    "image_url": ""
   }
+
 ]
