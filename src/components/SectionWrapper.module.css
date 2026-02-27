@@ -1,0 +1,12 @@
+.section { padding: 96px 0; }
+.section.tight { padding: 64px 0; }
+
+.white { background: var(--color-white); }
+.grey { background: var(--color-off-white); }
+.dark { background: #001433; color: var(--color-white); }
+.primary { background: var(--gradient-hero); color: var(--color-white); }
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .section.tight { padding: 40px 0; }
+}
