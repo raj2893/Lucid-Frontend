@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '../styles/globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Script from 'next/script'; // 👈 ADD THIS
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lucidpharmatech.com'),
@@ -60,12 +61,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#003366" />
       </head>
+
       <body>
         <Navbar />
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>
         <Footer />
+
+        {/* ✅ Google Analytics (Correct Way) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E5EDJ2H2R8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E5EDJ2H2R8');
+          `}
+        </Script>
       </body>
     </html>
   );
