@@ -62,13 +62,13 @@ export default function PrivacyPage() {
             <p>
               You have the right to access, correct, or request deletion of personal
               data we hold about you. To exercise these rights, please contact us at
-              info@lucidpharmatech.com.
+              info@lucidllp.com.
             </p>
 
             <h2>6. Contact</h2>
             <p>
               For privacy-related queries, please contact us at{' '}
-              <a href="mailto:info@lucidpharmatech.com">info@lucidpharmatech.com</a>.
+              <a href="mailto:info@lucidllp.com">info@lucidllp.com</a>.
             </p>
           </div>
         </div>

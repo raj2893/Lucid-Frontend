@@ -98,8 +98,8 @@ export default function Footer() {
                   </li>
                   <li className={styles.contactItem}>
                     <span className={styles.contactLabel}>Email</span>
-                    <a href="mailto:info@lucidpharmatech.com" className={styles.footLink}>
-                      info@lucidpharmatech.com
+                    <a href="mailto:info@lucidllp.com" className={styles.footLink}>
+                      info@lucidllp.com
                     </a>
                   </li>
                 </ul>

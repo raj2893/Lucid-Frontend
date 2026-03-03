@@ -59,7 +59,7 @@ export default function AboutPage() {
               suffering. That weight is not taken lightly.
             </p>
 
-            <h2>Our Pharmaceutical Philosophy</h2>
+            <h2>Our Philosophy</h2>
             <p>
               We believe quality and affordability are not mutually exclusive. Through
               efficient manufacturing processes, responsible sourcing, and a lean,
@@ -67,19 +67,10 @@ export default function AboutPage() {
               meet the highest standards without unnecessary cost burden on the patient.
             </p>
             <p>
-              Our approach to pharmaceuticals is holistic. We do not merely manufacture
+              Our approach to pharmaceuticals is holistic. We do not manufacture
               products — we develop solutions. From formulation to packaging, from
               regulatory compliance to distribution strategy, every element of our
               operation is designed with the end patient in mind.
-            </p>
-
-            <h2>Institutional Backing &amp; Trust</h2>
-            <p>
-              Lucid Pharmatech operates under the umbrella of{' '}
-              <strong>Tablets (India) Limited</strong>, a name with a long-standing
-              reputation in pharmaceutical manufacturing. This backing gives us the
-              financial strength, operational depth, and institutional credibility to
-              invest in quality without compromise.
             </p>
 
             <h2>Where We Are Headed</h2>

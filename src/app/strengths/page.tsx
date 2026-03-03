@@ -18,18 +18,8 @@ const strengths = [
   {
     icon: '👥',
     title: 'Dedicated & Committed Professional Team',
-    body: `Our team is our greatest asset. Lucid Pharmatech is built on the expertise of qualified pharmacists, formulation scientists, quality assurance professionals, and business leaders — all unified by a shared commitment to our mission. We invest in continuous professional development and maintain a culture of accountability and excellence.`,
-  },
-  {
-    icon: '🔬',
-    title: 'Strong Pharmaceutical Foundation',
-    body: `Our pharmaceutical operations are built on a foundation of scientific rigor, regulatory knowledge, and manufacturing best practices. We adhere to Good Manufacturing Practice (GMP) principles, maintain robust quality management systems, and ensure every formulation undergoes comprehensive validation before entering the market.`,
-  },
-  {
-    icon: '🏢',
-    title: 'Established Institutional Backing',
-    body: `Operating under Tablets (India) Limited, we benefit from institutional-grade financial strength, governance frameworks, and deep pharmaceutical expertise. This backing provides stability, credibility, and the capacity to make long-term investments in quality, infrastructure, and people — without compromising our core mission.`,
-  },
+    body: `Our team is our greatest asset. Lucid Pharmatech is built on the expertise of quality assurance professionals, and business leaders — all unified by a shared commitment to our mission. We invest in continuous professional development and maintain a culture of accountability and excellence.`,
+  }
 ];
 
 export default function StrengthsPage() {

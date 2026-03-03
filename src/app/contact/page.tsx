@@ -49,8 +49,8 @@ export default function ContactPage() {
               <div className={contactStyles.infoBlocks}>
                 <div className={contactStyles.infoBlock}>
                   <h3>Email</h3>
-                  <a href="mailto:info@lucidpharmatech.com" className={contactStyles.infoValue}>
-                    info@lucidpharmatech.com
+                  <a href="mailto:info@lucidllp.com" className={contactStyles.infoValue}>
+                    info@lucidllp.com
                   </a>
                 </div>
                 <div className={contactStyles.infoBlock}>

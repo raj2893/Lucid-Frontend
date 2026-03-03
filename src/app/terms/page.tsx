@@ -72,7 +72,7 @@ export default function TermsPage() {
             <h2>7. Contact</h2>
             <p>
               For any legal queries, please contact us at{' '}
-              <a href="mailto:info@lucidpharmatech.com">info@lucidpharmatech.com</a>.
+              <a href="mailto:info@lucidllp.com">info@lucidllp.com</a>.
             </p>
           </div>
         </div>

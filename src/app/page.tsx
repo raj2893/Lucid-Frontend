@@ -148,12 +148,6 @@ export default function HomePage() {
                 desc: 'A committed, qualified team of pharmaceutical scientists, quality experts, and business professionals united by a common purpose.',
                 link: '/strengths',
               },
-              {
-                icon: '🔬',
-                title: 'Strong Pharmaceutical Foundation',
-                desc: 'Deep scientific knowledge, regulatory compliance expertise, and manufacturing processes built to global pharmaceutical standards.',
-                link: '/quality',
-              },
             ].map(s => (
               <article key={s.title} className={styles.strengthCard}>
                 <div className={styles.strengthIcon} aria-hidden="true">{s.icon}</div>
