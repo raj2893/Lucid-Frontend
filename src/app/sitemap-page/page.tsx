@@ -7,7 +7,7 @@ import sitemapStyles from './sitemap.module.css';
 export const metadata: Metadata = {
   title: 'Sitemap | Lucid Pharmatech LLP',
   description: 'Complete sitemap for the Lucid Pharmatech LLP website.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/sitemap-page' },
+  alternates: { canonical: 'https://www.lucidllp.com/sitemap-page' },
 };
 
 const pages = [
