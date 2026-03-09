@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: 'Lucid Pharmatech Enquiry <onboarding@resend.dev>',
-      to: 'info@lucidllp.com',
+      to: 'vipulpatelras@gmail.com',
       replyTo: email,
       subject: `[Enquiry] ${subject || 'General'} — ${first_name} ${last_name}`,
       text: `
