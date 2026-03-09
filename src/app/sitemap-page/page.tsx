@@ -19,6 +19,8 @@ const pages = [
     { href: '/quality', label: 'Quality & Manufacturing Excellence' },
     { href: '/ethics', label: 'Corporate Ethics & Commitment' },
     { href: '/contact', label: 'Contact Us' },
+    { href: '/blog', label: 'Blogs' },
+    { href: '/blog/calafine-lotion-sunburn-relief-acne-care-skin-nourishment', label: 'Calafine Blog' },
   ]},
   { section: 'Legal & Compliance', links: [
     { href: '/privacy', label: 'Privacy Policy' },
