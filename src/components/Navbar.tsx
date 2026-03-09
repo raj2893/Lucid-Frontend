@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -34,7 +35,7 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link href="/" className={styles.logo} aria-label="Lucid Pharmatech LLP - Home">
-          <span className={styles.logoMark}>⬡</span>
+          <Image src="/favicon.ico" alt="Lucid Pharmatech Logo" width={32} height={32} className={styles.logoMark} />
           <span className={styles.logoText}>
             <span className={styles.logoMain}>Lucid</span>
             <span className={styles.logoSub}>Pharmatech LLP</span>

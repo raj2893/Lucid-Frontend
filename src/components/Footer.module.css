@@ -25,8 +25,9 @@
 }
 
 .logoMark {
-  font-size: 1.6rem;
-  color: #4da6ff;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .logoText {

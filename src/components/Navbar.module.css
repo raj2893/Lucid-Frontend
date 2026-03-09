@@ -35,9 +35,9 @@
 }
 
 .logoMark {
-  font-size: 1.8rem;
-  color: #4da6ff;
-  line-height: 1;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
   transition: transform var(--transition);
 }
 

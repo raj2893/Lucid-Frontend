@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SchemaOrg from './SchemaOrg';
 import styles from './Footer.module.css';
+import Image from 'next/image';
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -41,7 +42,7 @@ export default function Footer() {
               {/* Brand column */}
               <div className={styles.brand}>
                 <Link href="/" className={styles.logo}>
-                  <span className={styles.logoMark}>⬡</span>
+                  <Image src="/favicon.ico" alt="Lucid Pharmatech Logo" width={28} height={28} className={styles.logoMark} />
                   <span className={styles.logoText}>
                     <span className={styles.logoMain}>Lucid Pharmatech LLP</span>
                     <span className={styles.logoSub}>Quality Healthcare For All</span>
