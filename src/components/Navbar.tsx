@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/quality', label: 'Quality' },
   { href: '/ethics', label: 'Ethics' },
   { href: '/contact', label: 'Contact' },
+  { href: '/blog', label: 'Blogs' },
 ];
 
 export default function Navbar() {

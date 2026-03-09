@@ -69,6 +69,7 @@ export default function Footer() {
                     { href: '/strengths', label: 'Capabilities' },
                     { href: '/quality', label: 'Quality Excellence' },
                     { href: '/ethics', label: 'Ethics & Commitment' },
+                    { href: '/blog', label: 'Content Blogs' },
                   ].map(l => (
                     <li key={l.href}>
                       <Link href={l.href} className={styles.footLink}>{l.label}</Link>
