@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       'The one cream that balances oily zones, heals dry patches, and deeply nourishes — without feeling heavy or greasy.',
     images: [
       {
-        url: '/images/moistsure-cream.jpg',
+        url: '/images/moistsure-cream.png',
         width: 1200,
         height: 630,
         alt: 'Moist Sure Cream with Aloe Vera Vitamin-E and Jojoba Oil',
