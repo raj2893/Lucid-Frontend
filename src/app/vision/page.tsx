@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Vision & Values | Lucid Pharmatech LLP',
   description:
     'Lucid Pharmatech LLP vision: quality pharmaceutical products at affordable prices for all. Discover our core values of compassion, integrity, and excellence.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/vision' },
+  alternates: { canonical: 'https://www.lucidllp.com/vision' },
 };
 
 export default function VisionPage() {

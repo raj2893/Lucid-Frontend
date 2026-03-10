@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Lucid Pharmatech LLP',
   description:
     'Privacy Policy for Lucid Pharmatech LLP — how we collect, use, and protect personal data on our website.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/privacy' },
+  alternates: { canonical: 'https://www.lucidllp.com/privacy' },
 };
 
 export default function PrivacyPage() {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Parent Group — Jhaver Group & Tablets India Ltd | Lucid Pharmatech',
   description:
     'Lucid Pharmatech LLP is a proud enterprise of Tablets (India) Limited, flagship of the Jhaver Group — a diversified industrial conglomerate based in Chennai.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/parent-group' },
+  alternates: { canonical: 'https://www.lucidllp.com/parent-group' },
 };
 
 const divisions = [

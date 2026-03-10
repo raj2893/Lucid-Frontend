@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Blog — Skincare Tips, Pharma Insights & Product Guides | Lucid Pharmatech',
   description:
     'Explore skincare guides, pharmaceutical insights, and product deep-dives from Lucid Pharmatech LLP — your resource for better health decisions.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/blog' },
+  alternates: { canonical: 'https://www.lucidllp.com/blog' },
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -27,7 +27,17 @@ const posts = [
     date: 'March 9, 2026',
     readTime: '5 min read',
   },
-  // Add future blog posts here ↓
+  {
+    slug: 'best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba',
+    title: 'Best Moisturizer for Combination Skin — Moist Sure Cream with Aloe Vera, Vitamin-E & Jojoba Oil',
+    excerpt:
+      'Oily T-zone but dry cheeks? Most creams fix one and worsen the other. Moist Sure Cream balances both — with Aloe Vera, Vitamin-E, and Jojoba Oil for deep, non-greasy nourishment.',
+    image: '/images/moistsure-cream.jpg',
+    imageAlt: 'Moist Sure Cream with Aloe Vera Vitamin-E and Jojoba Oil',
+    category: 'Moisturizers',
+    date: 'March 10, 2025',
+    readTime: '6 min read',
+  },
 ];
 
 export default function BlogIndexPage() {

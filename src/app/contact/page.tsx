@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   title: 'Contact Us | Lucid Pharmatech LLP',
   description:
     'Contact Lucid Pharmatech LLP for partnership enquiries, business collaboration, or general information about our pharmaceutical products and services.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/contact' },
+  alternates: { canonical: 'https://www.lucidllp.com/contact' },
 };
 
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contact Lucid Pharmatech LLP',
-  url: 'https://www.lucidpharmatech.com/contact',
+  url: 'https://www.lucidllp.com/contact',
   description: 'Contact page for Lucid Pharmatech LLP partnership and business enquiries.',
 };
 

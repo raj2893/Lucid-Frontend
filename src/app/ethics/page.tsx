@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Corporate Ethics & Commitment | Lucid Pharmatech LLP',
   description:
     'Lucid Pharmatech LLP operates with unwavering ethical standards — transparency, compliance, and social responsibility at the core of every business decision.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/ethics' },
+  alternates: { canonical: 'https://www.lucidllp.com/ethics' },
 };
 
 export default function EthicsPage() {

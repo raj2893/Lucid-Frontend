@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Script from 'next/script'; // 👈 ADD THIS
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.lucidpharmatech.com'),
+  metadataBase: new URL('https://www.lucidllp.com'),
   title: {
     default: 'Lucid Pharmatech LLP | Quality Pharma at Affordable Prices',
     template: '%s | Lucid Pharmatech LLP',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://www.lucidpharmatech.com',
+    url: 'https://www.lucidllp.com',
     siteName: 'Lucid Pharmatech LLP',
     title: 'Lucid Pharmatech LLP | Quality Pharma at Affordable Prices',
     description:
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://www.lucidpharmatech.com' },
+  alternates: { canonical: 'https://www.lucidllp.com' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

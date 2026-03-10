@@ -19,7 +19,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://www.lucidpharmatech.com${item.href}`,
+      item: `https://www.lucidllp.com${item.href}`,
     })),
   };
 

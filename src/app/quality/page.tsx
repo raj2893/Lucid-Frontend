@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Quality & Manufacturing Excellence | Lucid Pharmatech LLP',
   description:
     'Lucid Pharmatech LLP maintains the highest pharmaceutical quality standards — GMP-aligned manufacturing, rigorous QC, and a commitment to product safety.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/quality' },
+  alternates: { canonical: 'https://www.lucidllp.com/quality' },
 };
 
 export default function QualityPage() {

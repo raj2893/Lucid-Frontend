@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Strengths & Capabilities | Lucid Pharmatech LLP',
   description:
     'Discover the core strengths of Lucid Pharmatech LLP — innovative packaging, dedicated professionals, and a strong pharmaceutical foundation.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/strengths' },
+  alternates: { canonical: 'https://www.lucidllp.com/strengths' },
 };
 
 const strengths = [

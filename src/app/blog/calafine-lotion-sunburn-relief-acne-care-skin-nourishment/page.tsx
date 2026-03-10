@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical:
-      'https://www.lucidpharmatech.com/blog/calafine-lotion-sunburn-relief-acne-care-skin-nourishment',
+      'https://www.lucidllp.com/blog/calafine-lotion-sunburn-relief-acne-care-skin-nourishment',
   },
   openGraph: {
     title: 'Best Lotion for Sunburn, Acne & Dry Skin — CALAFINE Lotion',

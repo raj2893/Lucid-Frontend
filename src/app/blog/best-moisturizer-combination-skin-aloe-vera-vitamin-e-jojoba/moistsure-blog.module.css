@@ -1,0 +1,575 @@
+/* ─────────────────────────────────────────
+   moistsure-blog.module.css
+   Place at:
+   app/blog/best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba/
+───────────────────────────────────────── */
+
+/* ── Base ── */
+.blog {
+  font-family: 'DM Sans', sans-serif;
+  color: #1c2b1e;
+  background: #fff;
+}
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+/* ────────────────────────
+   HERO
+──────────────────────── */
+.hero {
+  position: relative;
+  background: #f0f7f1;
+  padding: 72px 24px 80px;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(144, 200, 144, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 80%, rgba(200, 230, 200, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 56px;
+  align-items: center;
+}
+
+.heroText {
+  color: #1c2b1e;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(76, 153, 76, 0.12);
+  color: #2e7d32;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(76, 153, 76, 0.25);
+}
+
+.heroTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1a3320;
+  margin: 0 0 20px;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: #2e7d32;
+}
+
+.heroSub {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #3d5140;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.heroCta {
+  display: inline-block;
+  background: #2e7d32;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.93rem;
+  padding: 14px 28px;
+  border-radius: 7px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 18px rgba(46, 125, 50, 0.35);
+}
+
+.heroCta:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.4);
+  color: #fff;
+}
+
+.heroNote {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #6a8870;
+  letter-spacing: 0.03em;
+}
+
+/* ── Image ── */
+.imageWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.imageGlow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(144, 200, 144, 0.4) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-height: 400px;
+  background: #fff;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(46, 125, 50, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+  z-index: 1;
+}
+
+.imagePills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.imagePills span {
+  background: #fff;
+  border: 1px solid #c8e6c9;
+  color: #2e7d32;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+}
+
+/* ────────────────────────
+   SECTIONS
+──────────────────────── */
+.section {
+  padding: 60px 0 0;
+}
+
+.sectionTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #1a3320;
+  margin: 0 0 20px;
+  line-height: 1.25;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3d4f42;
+  margin: 0 0 16px;
+}
+
+/* ────────────────────────
+   ZONE GRID
+──────────────────────── */
+.zoneGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.zoneCard {
+  background: #f8fdf8;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 14px;
+  padding: 24px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.zoneCard:hover {
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.1);
+  transform: translateY(-3px);
+}
+
+.zoneTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.zoneIcon {
+  font-size: 1.6rem;
+}
+
+.zoneLabel {
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: #2e7d32;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.zoneProblem {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1a3320;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.zoneFix {
+  font-size: 0.88rem;
+  color: #4a6350;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ────────────────────────
+   INGREDIENTS
+──────────────────────── */
+.ingredientList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ingredientCard {
+  border: 1.5px solid;
+  border-radius: 16px;
+  padding: 28px 28px 24px;
+  transition: box-shadow 0.2s ease;
+}
+
+.ingredientCard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+}
+
+.ingredientHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.ingredientIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ingredientName {
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2e7d32;
+  margin: 0 0 2px;
+}
+
+.ingredientTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a3320;
+  margin: 0;
+}
+
+.ingredientDesc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #3d4f42;
+  margin: 0;
+}
+
+/* ────────────────────────
+   MID CTA
+──────────────────────── */
+.midCta {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #388e3c 100%);
+  border-radius: 20px;
+  padding: 48px 40px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.midCtaLeaf {
+  font-size: 5rem;
+  opacity: 0.08;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.midCtaHead {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.midCtaSub {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin: 0 0 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ────────────────────────
+   HOW TO USE STEPS
+──────────────────────── */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.stepCard {
+  background: #f8fdf8;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 14px;
+  padding: 26px;
+}
+
+.stepNum {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #c8e6c9;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stepTitle {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a3320;
+  margin: 0 0 8px;
+}
+
+.stepDesc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #4a6350;
+  margin: 0;
+}
+
+/* ────────────────────────
+   WHO IT'S FOR
+──────────────────────── */
+.forGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.forCard {
+  background: #fff;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.forCard:hover {
+  box-shadow: 0 6px 24px rgba(46,125,50,0.1);
+  transform: translateY(-3px);
+}
+
+.forIcon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.forLabel {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #1a3320;
+  margin: 0 0 6px;
+}
+
+.forDesc {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #4a6350;
+  margin: 0;
+}
+
+/* ────────────────────────
+   FAQ
+──────────────────────── */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.faqItem {
+  border: 1.5px solid #c8e6c9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fdf8;
+}
+
+.faqItem[open] {
+  border-color: #2e7d32;
+}
+
+.faqQ {
+  padding: 18px 20px;
+  font-weight: 600;
+  font-size: 0.96rem;
+  color: #1a3320;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.faqQ::-webkit-details-marker { display: none; }
+
+.faqQ::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #2e7d32;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+details[open] .faqQ::after { content: '−'; }
+
+.faqA {
+  padding: 0 20px 18px;
+  padding-top: 14px;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #4a6350;
+  margin: 0;
+  border-top: 1px solid #e0f0e0;
+}
+
+/* ────────────────────────
+   BOTTOM CTA
+──────────────────────── */
+.bottomCta {
+  background: #f0f7f1;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 20px;
+  padding: 52px 44px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bottomCtaDecor {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(144, 200, 144, 0.25) 0%, transparent 70%);
+  bottom: -100px;
+  right: -60px;
+  pointer-events: none;
+}
+
+.bottomCta h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #1a3320;
+  margin: 0 0 16px;
+  position: relative;
+}
+
+.bottomCta p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #3d4f42;
+  max-width: 560px;
+  margin: 0 auto 28px;
+  position: relative;
+}
+
+.bottomNote {
+  font-size: 0.8rem !important;
+  color: #6a8870 !important;
+  margin-top: 14px !important;
+  margin-bottom: 0 !important;
+  letter-spacing: 0.03em;
+}
+
+/* ────────────────────────
+   RESPONSIVE
+──────────────────────── */
+@media (max-width: 880px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageWrap {
+    max-width: 260px;
+    margin: 0 auto;
+    order: -1;
+  }
+
+  .imageCard { max-height: 300px; }
+
+  .forGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 48px 20px 56px; }
+
+  .zoneGrid,
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .forGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .midCta { padding: 36px 22px; }
+  .bottomCta { padding: 36px 22px; }
+}

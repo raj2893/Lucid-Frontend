@@ -8,19 +8,19 @@ export const metadata: Metadata = {
   title: 'About Us | Lucid Pharmatech LLP',
   description:
     'Learn about Lucid Pharmatech LLP — our history, mission, leadership philosophy, and commitment to affordable quality pharmaceutical products.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/about' },
+  alternates: { canonical: 'https://www.lucidllp.com/about' },
 };
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   name: 'About Lucid Pharmatech LLP',
-  url: 'https://www.lucidpharmatech.com/about',
+  url: 'https://www.lucidllp.com/about',
   description: 'About Lucid Pharmatech LLP — our mission, values, and pharmaceutical heritage.',
   mainEntity: {
     '@type': 'Organization',
     name: 'Lucid Pharmatech LLP',
-    url: 'https://www.lucidpharmatech.com',
+    url: 'https://www.lucidllp.com',
   },
 };
 

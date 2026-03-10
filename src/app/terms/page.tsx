@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Terms & Compliance | Lucid Pharmatech LLP',
   description:
     'Terms of use and compliance information for the Lucid Pharmatech LLP website.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com/terms' },
+  alternates: { canonical: 'https://www.lucidllp.com/terms' },
 };
 
 export default function TermsPage() {
@@ -26,7 +26,7 @@ export default function TermsPage() {
             <h2>1. Acceptance of Terms</h2>
             <p>
               By accessing and using the Lucid Pharmatech LLP website
-              (www.lucidpharmatech.com), you accept and agree to be bound by these Terms
+              (www.lucidllp.com), you accept and agree to be bound by these Terms
               and Compliance guidelines. If you do not agree, please discontinue use of
               this website.
             </p>

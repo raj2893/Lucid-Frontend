@@ -7,17 +7,17 @@ export const metadata: Metadata = {
   title: 'Lucid Pharmatech LLP | Quality Pharmaceutical Products at Affordable Prices',
   description:
     'Lucid Pharmatech LLP delivers quality pharmaceutical products at affordable prices — committed to accessible healthcare for all.',
-  alternates: { canonical: 'https://www.lucidpharmatech.com' },
+  alternates: { canonical: 'https://www.lucidllp.com' },
 };
 
 const homeSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Lucid Pharmatech LLP - Home',
-  url: 'https://www.lucidpharmatech.com',
+  url: 'https://www.lucidllp.com',
   description:
     'Quality pharmaceutical products at affordable prices for the ailing humanity.',
-  isPartOf: { '@type': 'WebSite', name: 'Lucid Pharmatech LLP', url: 'https://www.lucidpharmatech.com' },
+  isPartOf: { '@type': 'WebSite', name: 'Lucid Pharmatech LLP', url: 'https://www.lucidllp.com' },
 };
 
 export default function HomePage() {

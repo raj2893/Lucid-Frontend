@@ -7,8 +7,8 @@ const orgSchema = {
   '@context': 'https://schema.org',
   '@type': ['Organization', 'MedicalOrganization'],
   name: 'Lucid Pharmatech LLP',
-  url: 'https://www.lucidpharmatech.com',
-  logo: 'https://www.lucidpharmatech.com/logo.png',
+  url: 'https://www.lucidllp.com',
+  logo: 'https://www.lucidllp.com/logo.png',
   description:
     'Lucid Pharmatech LLP delivers quality pharmaceutical products at affordable prices — committed to healthcare for all.',
   address: {
@@ -22,10 +22,10 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Lucid Pharmatech LLP',
-  url: 'https://www.lucidpharmatech.com',
+  url: 'https://www.lucidllp.com',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://www.lucidpharmatech.com/?q={search_term_string}',
+    target: 'https://www.lucidllp.com/?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };
