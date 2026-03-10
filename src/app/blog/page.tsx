@@ -32,7 +32,7 @@ const posts = [
     title: 'Best Moisturizer for Combination Skin — Moist Sure Cream with Aloe Vera, Vitamin-E & Jojoba Oil',
     excerpt:
       'Oily T-zone but dry cheeks? Most creams fix one and worsen the other. Moist Sure Cream balances both — with Aloe Vera, Vitamin-E, and Jojoba Oil for deep, non-greasy nourishment.',
-    image: '/images/moistsure-cream.jpg',
+    image: '/images/moistsure-cream.png',
     imageAlt: 'Moist Sure Cream with Aloe Vera Vitamin-E and Jojoba Oil',
     category: 'Moisturizers',
     date: 'March 10, 2025',
