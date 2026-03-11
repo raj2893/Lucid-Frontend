@@ -35,9 +35,20 @@ const posts = [
     image: '/images/moistsure-cream.png',
     imageAlt: 'Moist Sure Cream with Aloe Vera Vitamin-E and Jojoba Oil',
     category: 'Moisturizers',
-    date: 'March 10, 2025',
+    date: 'March 10, 2026',
     readTime: '6 min read',
   },
+{
+  slug: 'best-face-wash-oily-skin-india-2026',
+  title: 'Best Face Wash for Oily Skin in India (2026 Guide) — FreshOLite Vitamin C',
+  excerpt:
+    'Clogged pores, greasy T-zone, and dull skin? FreshOLite Vitamin C Face Wash with Orange Extracts deeply cleanses, brightens, and controls oil — without over-drying. Our 2026 pick for oily skin.',
+  image: '/images/fresholite-facewash.png',
+  imageAlt: 'FreshOLite Vitamin C Face Wash with Orange Extracts',
+  category: 'Face Wash',
+  date: 'March 11, 2026',
+  readTime: '7 min read',
+},  
 ];
 
 export default function BlogIndexPage() {

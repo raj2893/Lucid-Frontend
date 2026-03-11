@@ -21,6 +21,8 @@ const pages = [
     { href: '/contact', label: 'Contact Us' },
     { href: '/blog', label: 'Blogs' },
     { href: '/blog/calafine-lotion-sunburn-relief-acne-care-skin-nourishment', label: 'Calafine Blog' },
+    { href: '/blog/best-face-wash-oily-skin-india-2026', label: 'Facewash Blog' },
+    { href: '/blog/best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba', label: 'Moisturiser Blog' },
   ]},
   { section: 'Legal & Compliance', links: [
     { href: '/privacy', label: 'Privacy Policy' },
