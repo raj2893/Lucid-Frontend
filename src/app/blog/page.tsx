@@ -38,17 +38,39 @@ const posts = [
     date: 'March 10, 2026',
     readTime: '6 min read',
   },
-{
-  slug: 'best-face-wash-oily-skin-india-2026',
-  title: 'Best Face Wash for Oily Skin in India (2026 Guide) — FreshOLite Vitamin C',
-  excerpt:
-    'Clogged pores, greasy T-zone, and dull skin? FreshOLite Vitamin C Face Wash with Orange Extracts deeply cleanses, brightens, and controls oil — without over-drying. Our 2026 pick for oily skin.',
-  image: '/images/fresholite-facewash.png',
-  imageAlt: 'FreshOLite Vitamin C Face Wash with Orange Extracts',
-  category: 'Face Wash',
-  date: 'March 11, 2026',
-  readTime: '7 min read',
-},  
+  {
+    slug: 'best-face-wash-oily-skin-india-2026',
+    title: 'Best Face Wash for Oily Skin in India (2026 Guide) — FreshOLite Vitamin C',
+    excerpt:
+      'Clogged pores, greasy T-zone, and dull skin? FreshOLite Vitamin C Face Wash with Orange Extracts deeply cleanses, brightens, and controls oil — without over-drying. Our 2026 pick for oily skin.',
+    image: '/images/fresholite-facewash.png',
+    imageAlt: 'FreshOLite Vitamin C Face Wash with Orange Extracts',
+    category: 'Face Wash',
+    date: 'March 11, 2026',
+    readTime: '7 min read',
+  },  
+  {
+    slug: 'calamine-lotion-uses-benefits-calafine-complete-guide-2026',
+    title: 'Calamine Lotion Uses, Benefits & Why CALAFINE Is the Smarter Upgrade — 2026 Complete Guide',
+    excerpt:
+      'Everything you need to know about calamine lotion — all its uses, benefits, limitations — and why CALAFINE Lotion is the modern upgrade for sunburn, acne, rashes, and dry skin. 5,000+ word definitive guide.',
+    image: '/images/calafine-lotion.png',
+    imageAlt: 'CALAFINE Lotion — Complete 2026 Skincare Guide',
+    category: 'Complete Guide',
+    date: 'March 12, 2026',
+    readTime: '20 min read',
+  },
+  {
+    slug: 'best-sunscreen-oily-skin-india-spf-guide',
+    title: 'Best Sunscreen for Oily Skin in India (2026 SPF Guide) — Freshotil Sunguard 50',
+    excerpt:
+      'Every sunscreen making your face greasy? Our 2026 SPF guide covers exactly what oily skin needs — broad-spectrum UVA/UVB protection, non-greasy formulas, and water resistance for India\'s heat and humidity.',
+    image: '/images/freshotil-sunguard.png',
+    imageAlt: 'Freshotil Sunguard 50 SPF Sunscreen Lotion for Oily Skin',
+    category: 'Sunscreen',
+    date: 'March 12, 2026',
+    readTime: '8 min read',
+  },  
 ];
 
 export default function BlogIndexPage() {
