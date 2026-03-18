@@ -71,6 +71,17 @@ const posts = [
     date: 'March 12, 2026',
     readTime: '8 min read',
   },  
+  {
+    slug: 'best-hair-oil-hair-growth-india-biotin',
+    title: 'Best Hair Oil for Hair Growth in India (2026 Biotin Guide) — HairOShine Advance Biotin Oil',
+    excerpt:
+      'Hair fall affects over 60% of Indian adults under 35. Hard water, UV stress, pollution, and nutritional gaps are destroying your follicles. The complete 2026 biotin hair oil guide — science, scalp types, application protocol, and honest results timeline.',
+    image: '/images/hairoshine-biotin-oil.jpg',
+    imageAlt: 'HairOShine Advance Biotin Hair Oil — Pack of 2 for Hair Growth India',
+    category: 'Hair Care',
+    date: 'March 18, 2026',
+    readTime: '18 min read',
+  },  
 ];
 
 export default function BlogIndexPage() {
