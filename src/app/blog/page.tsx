@@ -71,6 +71,38 @@ const posts = [
     date: 'March 12, 2026',
     readTime: '8 min read',
   },  
+  {
+    slug: 'best-face-wash-acne-prone-skin-india',
+    title: 'Best Face Wash for Acne-Prone Skin in India 2026 — Complete Guide',
+    description: 'Find the best face wash for acne-prone skin in India. Salicylic acid, neem & vitamin C formula clears breakouts, controls oil & prevents pimples. Shop now.',
+    image: '/images/fresholite-facewash.png',
+    date: 'April 2026',
+    readTime: '20 min read',
+    category: 'Facewash',
+    tags: ['Acne Care', 'Face Wash', 'Salicylic Acid', 'Neem', 'India Guide'],
+  },
+  {
+    slug: 'why-sunscreen-important-indoors-india',
+    title: 'Why Sunscreen Is Important Even Indoors in India — Complete SPF Guide 2026',
+    description:
+      'UV rays penetrate glass, screens emit blue light, and indoor skin is not protected skin. The complete 2026 guide to daily indoor sunscreen use for Indian skin types.',
+    image: '/images/freshotil-sunguard.png',
+    date: 'April 2026',
+    readTime: '19 min read',
+    category: 'Sunscreen',
+    tags: ['Sunscreen', 'SPF', 'Indoor Protection', 'Indian Skin'],
+  },
+  {
+    slug: 'how-to-choose-hair-oil-for-your-hair-type-india',
+    title: 'How to Choose the Right Hair Oil for Your Hair Type in India 2026',
+    description:
+      'Expert guide to matching hair oil to your exact hair type — oily scalp, fine, thick, curly, or damaged. Science-backed advice for Indian hair and climate.',
+    date: 'April 2026',
+    readTime: '20 min read',
+    category: 'Hair Care',
+    image: '/images/hair-oil-type-guide.png',
+    tags: ['Hair Oil', 'Hair Type Guide', 'Hair Growth', 'Biotin', 'India'],
+  }  
 ];
 
 export default function BlogIndexPage() {
