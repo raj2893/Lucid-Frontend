@@ -168,7 +168,7 @@ export default function BlogIndexPage() {
                   <div className={styles.cardImage}>
                     <Image
                       src={post.image}
-                      alt={post.imageAlt}
+                      alt={post.imageAlt || ''}
                       fill
                       style={{ objectFit: 'cover' }}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
