@@ -134,7 +134,26 @@ const posts = [
     category: 'Acne Care',
     image: '/images/freshotil-sunguard.png',
     tags: ['Sunscreen', 'Acne', 'SPF 50', 'Non-Comedogenic', 'PIH', 'India'],
-  }  
+  },
+  {
+    slug: 'best-face-wash-sensitive-skin-india',
+    title: 'Best Face Wash for Sensitive Skin in India 2026 — Complete Dermatologist Guide',
+    description: 'Find the best face wash for sensitive skin in India. pH-balanced, sulphate-free cleanser that soothes redness, repairs your barrier & suits Indian skin.',
+    date: 'April 2026',
+    category: 'Face Wash',
+    image: '/images/fresho-sensitive-face-wash.png',
+    href: '/blog/best-face-wash-sensitive-skin-india',
+  },
+  {
+    slug: 'face-wash-acne-vs-oily-skin-india',
+    title: 'Face Wash for Acne vs Oily Skin India: What\'s Actually Better?',
+    description: 'Acne face wash vs oily skin face wash — which is right for you? Expert India guide covers ingredients, skin types, common mistakes & best picks.',
+    image: '/images/fresho-sensitive-face-wash.png',
+    date: 'April 2026',
+    category: 'Skincare Science',
+    readTime: '20 min read',
+    tags: ['Acne', 'Oily Skin', 'Face Wash', 'Salicylic Acid', 'Niacinamide'],
+  }
 ];
 
 export default function BlogIndexPage() {
