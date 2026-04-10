@@ -60,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#003366" />
+        <meta name="google-adsense-account" content="ca-pub-7500098992423136" />
       </head>
 
       <body>
@@ -82,6 +83,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-E5EDJ2H2R8');
           `}
         </Script>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7500098992423136"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />        
       </body>
     </html>
   );
