@@ -153,7 +153,40 @@ const posts = [
     category: 'Skincare Science',
     readTime: '20 min read',
     tags: ['Acne', 'Oily Skin', 'Face Wash', 'Salicylic Acid', 'Niacinamide'],
-  }
+  },
+  {
+    slug: 'chemical-vs-natural-face-wash-which-works-better',
+    title: 'Chemical vs Natural Face Wash: Which One Works Better for Indian Skin? — 2026 Guide',
+    excerpt:
+      'The chemical vs natural face wash debate is getting Indian skincare decisions wrong. This expert 2026 guide explains what your cleanser is actually doing to your skin, decodes the science of pH, surfactants, and active ingredients, and shows why a Vitamin C and orange extract formula is what Indian skin actually needs.',
+    image: '/images/fresholite-facewash.png',
+    imageAlt: 'FreshOLite Vitamin C Face Wash — Chemical vs Natural Guide India 2026',
+    category: 'Skincare Science',
+    date: 'April 2026',
+    readTime: '20 min read',
+  },
+  {
+    slug: 'best-face-wash-teenagers-acne-india',
+    title: 'Best Face Wash for Teenagers with Acne in India 2026 — Complete Dermatologist Guide',
+    excerpt:
+      'Hormonal acne, oily skin, blackheads, and post-acne dark spots — the complete 2026 guide to clearing teenage acne in India with salicylic acid, vitamin C, and orange extract. Science-backed advice for every teen skin type.',
+    image: '/images/fresholite-facewash.png',
+    imageAlt: 'FreshOLite Vitamin C Face Wash for Teenage Acne India',
+    category: 'Teen Skincare',
+    date: 'April 2026',
+    readTime: '20 min read',
+  },
+  {
+    slug: 'best-face-wash-daily-use-without-drying-skin-india',
+    title: 'Best Face Wash for Daily Use Without Drying Skin India 2026 — Complete Guide',
+    excerpt:
+      'Most face washes strip your skin barrier twice a day. Hard water, SLS, alkaline pH — this is why your skin feels tight, over-produces oil, and ages faster. The complete 2026 India guide to a Vitamin C, sulphate-free cleanser that actually works daily.',
+    image: '/images/fresholite-facewash.png',
+    imageAlt: 'FreshOLite Vitamin C Face Wash with Orange Extracts — Best Daily Face Wash India',
+    category: 'Face Wash',
+    date: 'April 2026',
+    readTime: '20 min read',
+  }  
 ];
 
 export default function BlogIndexPage() {
