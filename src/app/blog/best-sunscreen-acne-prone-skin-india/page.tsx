@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Non-comedogenic, lightweight sunscreen that protects acne-prone Indian skin without clogging pores. The definitive 2026 SPF guide for Indian skin types.',
     images: [
       {
-        url: '/images/sunscreen-acne-prone-skin-india.jpg',
+        url: '/images/freshotil-sunguard.png',
         width: 1200,
         height: 630,
         alt: 'Best Sunscreen for Acne-Prone Skin India 2026',

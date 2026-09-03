@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'anti aging face wash India',
   ],
   alternates: {
-    canonical: 'https://www.lucidpharmatech.com/blog/best-face-wash-oily-skin-india-2026',
+    canonical: 'https://www.lucidllp.com/blog/best-face-wash-oily-skin-india-2026',
   },
   openGraph: {
     title: 'Best Face Wash for Oily Skin in India (2026) — FreshOLite Vitamin C Face Wash',

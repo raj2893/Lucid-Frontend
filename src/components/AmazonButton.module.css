@@ -1,0 +1,75 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.icon {
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.btn:hover .icon {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+/* Solid — the purchase action. Warm tone so it reads as "leaving the
+   site to buy", distinct from the blue brand CTAs. */
+.solid {
+  background: var(--color-amazon);
+  color: #1a1206;
+  border: 1.5px solid var(--color-amazon);
+}
+
+.solid:hover {
+  background: var(--color-amazon-hover);
+  border-color: var(--color-amazon-hover);
+  color: #1a1206;
+  box-shadow: 0 6px 18px rgba(196, 130, 20, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Outline — secondary placements where a blue CTA leads instead. */
+.outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-border-strong);
+}
+
+.outline:hover {
+  border-color: var(--color-amazon);
+  background: rgba(224, 154, 30, 0.08);
+  color: var(--color-primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .icon {
+    transition: none;
+  }
+  .btn:hover {
+    transform: none;
+  }
+  .btn:hover .icon {
+    transform: none;
+  }
+}

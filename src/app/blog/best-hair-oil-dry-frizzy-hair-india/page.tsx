@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'End dry, frizzy, unmanageable hair with the right oil for Indian climate and hair types. The complete 2026 expert guide to smooth, nourished hair.',
     images: [
       {
-        url: '/images/hairoshine-dry-frizzy-hair-oil.jpg',
+        url: '/images/hairoshine-biotin-oil.png',
         width: 1200,
         height: 630,
         alt: 'HairOShine Hair Oil for Dry and Frizzy Hair India',

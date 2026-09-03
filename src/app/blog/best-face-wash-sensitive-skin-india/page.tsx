@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Stop the redness, stinging, and tightness. The definitive 2026 guide to choosing and using the right face wash for sensitive Indian skin.',
     images: [
       {
-        url: '/images/fresho-sensitive-face-wash.jpg',
+        url: '/images/fresho-sensitive-face-wash.png',
         width: 1200,
         height: 630,
         alt: 'Best Face Wash for Sensitive Skin in India 2026',

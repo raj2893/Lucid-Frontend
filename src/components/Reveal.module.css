@@ -1,0 +1,24 @@
+/* Default: fully visible. `.armed` is only added by JS when motion is
+   allowed, so this can never hide content from crawlers or no-JS users. */
+
+.armed {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.shown {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .armed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Clear breakouts with India\'s most effective acne face wash. Salicylic acid + neem + vitamin C — the complete 2026 guide for every acne type and skin tone.',
     images: [
       {
-        url: '/images/fresholite-acne-face-wash.jpg',
+        url: '/images/fresholite-facewash.png',
         width: 1200,
         height: 630,
         alt: 'FreshOLite Acne Face Wash for Acne-Prone Skin India',

@@ -200,7 +200,11 @@ export default function BlogIndexPage() {
           <h1 className={styles.heroTitle}>The Lucid Pharmatech Blog</h1>
           <p className={styles.heroDesc}>
             Skincare tips, product guides, and pharmaceutical insights — written to help
-            you make better decisions for your health and skin.
+            you make better decisions for your health and skin.{' '}
+            <Link href="/products" style={{ color: '#7ec8ff', textDecoration: 'underline' }}>
+              Explore our products
+            </Link>
+            .
           </p>
         </div>
       </section>
@@ -234,7 +238,9 @@ export default function BlogIndexPage() {
                       <span>{post.readTime}</span>
                     </div>
                     <h2 className={styles.cardTitle}>{post.title}</h2>
-                    <p className={styles.cardExcerpt}>{post.excerpt}</p>
+                    <p className={styles.cardExcerpt}>
+                      {'excerpt' in post ? post.excerpt : post.description}
+                    </p>
                     <span className={styles.cardLink}>Read article →</span>
                   </div>
                 </Link>

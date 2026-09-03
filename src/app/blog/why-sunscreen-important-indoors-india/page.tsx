@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './sunscreen-indoors-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Why Sunscreen Is Important Even Indoors in India — Complete SPF Guide 2026',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
       'UV rays penetrate glass. Blue light ages skin. Indoor sun damage is real. The complete 2026 guide to daily sunscreen use for Indian skin — even indoors.',
     images: [
       {
-        url: '/images/sunscreen-indoors-india.jpg',
+        url: '/images/freshotil-sunguard.png',
         width: 1200,
         height: 630,
         alt: 'Why Sunscreen Is Important Even Indoors — India SPF Guide 2026',
@@ -949,6 +950,8 @@ export default function SunscreenIndoorsBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="freshotil-sunguard-50" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

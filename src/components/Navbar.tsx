@@ -8,12 +8,12 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/products', label: 'Products' },
   { href: '/about', label: 'About' },
-  { href: '/strengths', label: 'Capabilities' },
   { href: '/quality', label: 'Quality' },
-  { href: '/ethics', label: 'Ethics' },
+  { href: '/strengths', label: 'Capabilities' },
+  { href: '/blog', label: 'Resources' },
   { href: '/contact', label: 'Contact' },
-  { href: '/blog', label: 'Blogs' },
 ];
 
 export default function Navbar() {
@@ -61,15 +61,9 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className={styles.actions}>
-          <button
-            className={styles.ctaDisabled}
-            disabled
-            aria-disabled="true"
-            title="Product catalog coming soon"
-          >
+          <Link href="/products" className={styles.cta}>
             Explore Products
-            <span className={styles.badge}>Soon</span>
-          </button>
+          </Link>
 
           {/* Mobile toggle */}
           <button

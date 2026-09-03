@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical:
-      'https://www.lucidpharmatech.com/blog/calamine-lotion-uses-benefits-calafine-complete-guide-2026',
+      'https://www.lucidllp.com/blog/calamine-lotion-uses-benefits-calafine-complete-guide-2026',
   },
   openGraph: {
     title: 'Calamine Lotion Uses, Benefits & The Modern Upgrade — CALAFINE Complete Guide 2026',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       'Sunburn, acne, rashes, itching, dryness — this guide covers everything about calamine lotion, what it does, its limits, and why CALAFINE Lotion solves what calamine can\'t.',
     images: [
       {
-        url: '/images/calafine-lotion.jpg',
+        url: '/images/calafine-lotion.png',
         width: 1200,
         height: 630,
         alt: 'CALAFINE Lotion — Complete Skincare Guide 2026',

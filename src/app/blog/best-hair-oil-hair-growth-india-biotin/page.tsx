@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Stop hair fall and promote thicker growth with Biotin-enriched hair oil. The complete 2026 guide for Indian hair types, scalp conditions, and proven results.',
     images: [
       {
-        url: '/images/hairoshine-biotin-oil.jpg',
+        url: '/images/hairoshine-biotin-oil.png',
         width: 1200,
         height: 630,
         alt: 'HairOShine Advance Biotin Hair Oil for Hair Growth India',

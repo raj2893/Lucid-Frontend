@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Best Lotion for Sunburn, Acne & Dry Skin — CALAFINE Lotion',
     description:
       'One lotion. Three solutions. Sunburn relief, acne control, and deep skin nourishment — all in one gentle formula for all skin types.',
-    images: [{ url: '/images/calafine-lotion.jpg', width: 1200, height: 630, alt: 'CALAFINE Lotion' }],
+    images: [{ url: '/images/calafine-lotion.png', width: 1200, height: 630, alt: 'CALAFINE Lotion' }],
     type: 'article',
   },
 };

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Expert dermatologist guide: correct calamine lotion application for sunburn relief. Cooling, healing, and protection for Indian skin. Get instant relief.',
     images: [
       {
-        url: '/images/calafine-lotion-sunburn.jpg',
+        url: '/images/calafine-lotion.png',
         width: 1200,
         height: 630,
         alt: 'Calamine Lotion for Sunburn Relief - Cooling and Healing Formula',

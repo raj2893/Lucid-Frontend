@@ -78,6 +78,24 @@ export default function Footer() {
                 </ul>
               </div>
 
+              {/* Products */}
+              <div className={styles.col}>
+                <h3 className={styles.colTitle}>Products</h3>
+                <ul className={styles.linkList}>
+                  {[
+                    { href: '/products', label: 'All Consumer Products' },
+                    { href: '/products#face-care', label: 'Face Care' },
+                    { href: '/products#sun-care', label: 'Sun Care' },
+                    { href: '/products#skin-care', label: 'Skin Care' },
+                    { href: '/products#hair-care', label: 'Hair Care' },
+                  ].map(l => (
+                    <li key={l.href}>
+                      <Link href={l.href} className={styles.footLink}>{l.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* Legal */}
               <div className={styles.col}>
                 <h3 className={styles.colTitle}>Legal</h3>

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'SPF guide India 2026',
   ],
   alternates: {
-    canonical: 'https://www.lucidpharmatech.com/blog/best-sunscreen-oily-skin-india-spf-guide',
+    canonical: 'https://www.lucidllp.com/blog/best-sunscreen-oily-skin-india-spf-guide',
   },
   openGraph: {
     title: 'Best Sunscreen for Oily Skin in India (2026 SPF Guide) — Freshotil Sunguard 50',

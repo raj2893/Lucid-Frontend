@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import RelatedProduct from '@/components/RelatedProduct';
 import styles from './hair-oil-hair-type-guide-blog.module.css';
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
       'The definitive guide to matching the right hair oil to your scalp, strand type, and climate. Expert advice for Indian hair in 2026.',
     images: [
       {
-        url: '/images/hair-oil-type-guide.jpg',
+        url: '/images/hair-oil-type-guide.png',
         width: 1200,
         height: 630,
         alt: 'How to Choose the Right Hair Oil for Your Hair Type India Guide',
@@ -944,6 +945,8 @@ export default function HairOilTypeGuidePage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="hairoshine-advance-hair-oil" />
 
         {/* ─── FAQ ────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>
