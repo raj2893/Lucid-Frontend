@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './fresholite-acne-face-wash-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Face Wash for Acne-Prone Skin in India 2026 — Complete Guide',
@@ -916,6 +917,8 @@ export default function AcneFaceWashBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="fresholite-vitamin-c-face-wash" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

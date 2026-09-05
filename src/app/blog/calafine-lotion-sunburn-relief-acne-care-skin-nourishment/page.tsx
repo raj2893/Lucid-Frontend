@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './calafine-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Lotion for Sunburn Relief, Acne & Dry Skin — CALAFINE Lotion Review',
@@ -275,6 +276,8 @@ export default function CalafineBlogPage() {
             </div>
           </div>
         </section>
+
+        <RelatedProduct slug="calafine-calamine-lotion" />
 
         {/* ───── FAQ ───── */}
         <section className={styles.section}>

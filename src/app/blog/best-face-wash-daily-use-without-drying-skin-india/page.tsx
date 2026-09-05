@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './fresholite-daily-facewash-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Face Wash for Daily Use Without Drying Skin India 2026 — Complete Guide',
@@ -919,6 +920,8 @@ export default function FreshOLiteDailyFaceWashBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="fresholite-vitamin-c-face-wash" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './moistsure-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Moisturizer for Combination Skin in India 2025 — Moist Sure Cream',
@@ -309,6 +310,8 @@ export default function MoistSureBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="moist-sure-cream" />
 
         {/* ── FAQ ── */}
         <section className={styles.section}>

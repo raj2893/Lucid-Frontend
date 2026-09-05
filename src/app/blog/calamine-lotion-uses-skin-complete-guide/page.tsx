@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './calamine-lotion-uses-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Calamine Lotion Uses for Skin in India — Complete 2026 Guide | CALAFINE',
@@ -937,6 +938,8 @@ export default function CalamineBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="calafine-calamine-lotion" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

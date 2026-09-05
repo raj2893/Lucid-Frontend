@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './sunguard-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Sunscreen for Oily Skin in India 2026 — SPF 50 Guide | Freshotil Sunguard',
@@ -718,6 +719,8 @@ export default function SunguardBlogPage() {
             </Link>
           </div>
         </div>
+
+        <RelatedProduct slug="freshotil-sunguard-50" />
 
         {/* ── FAQ ── */}
         <section className={styles.section}>

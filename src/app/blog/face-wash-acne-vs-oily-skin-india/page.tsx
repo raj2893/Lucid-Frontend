@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './acne-vs-oily-skin-face-wash-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Face Wash for Acne vs Oily Skin India: What\'s Actually Better? (2026 Guide)',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
       'The definitive India guide to choosing between acne face wash and oily skin face wash — ingredients decoded, skin types mapped, and the right call made.',
     images: [
       {
-        url: '/images/fresho-sensitive-face-wash.png',
+        url: '/images/fresholite-vitamin-c-face-wash.png',
         width: 1200,
         height: 630,
         alt: 'FreshOLite Face Wash for Acne and Oily Skin India',
@@ -392,7 +393,7 @@ export default function AcneVsOilySkinFaceWashBlogPage() {
             <div className={styles.imageRing} aria-hidden="true" />
             <div className={styles.imageCard}>
               <Image
-                src="/images/fresho-sensitive-face-wash.png"
+                src="/images/fresholite-vitamin-c-face-wash.png"
                 alt="FreshOLite Vitamin C Face Wash for Acne and Oily Skin India"
                 fill
                 sizes="(max-width: 580px) 90vw, (max-width: 920px) 45vw, 400px"
@@ -1056,6 +1057,8 @@ export default function AcneVsOilySkinFaceWashBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="fresholite-vitamin-c-face-wash" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

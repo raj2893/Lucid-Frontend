@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './hairoshine-biotin-oil-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Hair Oil for Hair Growth in India 2026 — Biotin Oil Complete Guide',
@@ -906,6 +907,8 @@ export default function HairOShineBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="hairoshine-advance-hair-oil" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './calafine-complete-guide.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Calamine Lotion Uses, Benefits & Why CALAFINE Is the Smarter Upgrade (2026 Complete Guide)',
@@ -814,6 +815,8 @@ export default function CalaFineCompleteGuidePage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="calafine-calamine-lotion" />
 
         {/* ── SECTION 13: FAQ ── */}
         <section id="faq" className={styles.section}>

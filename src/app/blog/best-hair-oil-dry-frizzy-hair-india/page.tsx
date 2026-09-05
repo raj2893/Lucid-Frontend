@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './hairoshine-dry-frizzy-hair-oil-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Hair Oil for Dry and Frizzy Hair in India 2026 — Complete Guide',
@@ -920,6 +921,8 @@ export default function DryFrizzyHairOilBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="hairoshine-advance-hair-oil" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

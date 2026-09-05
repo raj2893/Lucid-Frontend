@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './best-sunscreen-acne-prone-skin-india-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Sunscreen for Acne-Prone Skin in India 2026 — Complete SPF Guide',
@@ -375,7 +376,7 @@ export default function SunscreenAcneProneIndiaPage() {
                 rel="noopener noreferrer"
                 className={styles.heroCta}
               >
-                Buy HairOShine Biotin Oil on Amazon →
+                Buy Freshotil Sunguard-50 on Amazon →
               </a>
               <span className={styles.heroSubNote}>Non-Comedogenic · SPF 50 · No White Cast · Matte Finish</span>
             </div>
@@ -691,7 +692,7 @@ export default function SunscreenAcneProneIndiaPage() {
               rel="noopener noreferrer"
               className={styles.heroCta}
             >
-              Get Advanced Biotin Oil on Amazon — Pack of 2 →
+              Get Freshotil Sunguard-50 on Amazon →
             </a>
           </div>
 
@@ -844,7 +845,7 @@ export default function SunscreenAcneProneIndiaPage() {
               rel="noopener noreferrer"
               className={styles.heroCta}
             >
-              Shop HairOShine Advanced Oil on Amazon →
+              Shop Freshotil Sunguard-50 on Amazon →
             </a>
           </div>
         </section>
@@ -926,6 +927,8 @@ export default function SunscreenAcneProneIndiaPage() {
           </div>
         </section>
 
+        <RelatedProduct slug="freshotil-sunguard-50" />
+
         {/* ─── FAQ ────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>
           <h2 className={styles.sectionTitle}>Frequently Asked Questions — Sunscreen for Acne-Prone Skin India</h2>
@@ -957,7 +960,7 @@ export default function SunscreenAcneProneIndiaPage() {
             rel="noopener noreferrer"
             className={styles.heroCta}
           >
-            Buy HairOShine Biotin Oil on Amazon →
+            Buy Freshotil Sunguard-50 on Amazon →
           </a>
           <p className={styles.bottomNote}>Non-Comedogenic · SPF 50 PA++++ · All Indian Skin Tones · No White Cast · Free Delivery Available</p>
         </section>

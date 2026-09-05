@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './calamine-vs-moisturizer-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Calamine Lotion vs Moisturizer: What\'s the Difference? India Skincare Guide 2026',
@@ -1029,6 +1030,9 @@ export default function CalamineVsMoisturizerBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="calafine-calamine-lotion" />
+        <RelatedProduct slug="moist-sure-cream" label="For daily moisturisation" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

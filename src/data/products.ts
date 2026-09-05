@@ -1,20 +1,21 @@
 // ─────────────────────────────────────────────────────────────
-//  LUCID PHARMATECH — CENTRAL CONSUMER PRODUCT DATA
+//  LUCID PHARMATECH — CENTRAL PRODUCT DATA
 //
-//  Single source of truth for consumer products.
-//  Homepage and /products both read from here.
-//  To add a product: append to `products`. To feature it: featured: true.
+//  Single source of truth. Homepage, /products and /products/[slug]
+//  all read from here. To add a product: append to `products`, add an
+//  image under /public/images, set the Amazon URL. The route, the
+//  listing, the sitemap entry and the schema follow automatically.
 //
-//  Every fact below is taken from existing blog copy in src/app/blog/**
-//  or from packaging visible in /public/images. Nothing is invented.
-//  Fields marked NEEDS USER VALUE must be confirmed before go-live.
+//  Every fact below is read off the actual product packaging in
+//  /public/images or taken from existing blog copy. Nothing invented.
+//  Fields marked NEEDS REVIEW / AMAZON URL REQUIRED need confirmation.
 // ─────────────────────────────────────────────────────────────
 
 export type CategorySlug = 'face-care' | 'sun-care' | 'skin-care' | 'hair-care';
 
 export type ConcernSlug =
   | 'oil-acne'
-  | 'sensitive-skin'
+  | 'tone-dark-spots'
   | 'sun-protection'
   | 'soothing-relief'
   | 'daily-moisture'
@@ -31,40 +32,53 @@ export interface ProductConcern {
   label: string;
 }
 
-export interface RelatedArticle {
-  title: string;
-  href: string;
-}
-
 export interface Product {
-  /** Stable key. Also the future /products/[slug] route segment. */
+  /** Route segment: /products/<slug> */
   slug: string;
   name: string;
-  /** Short label for tight UI (chips, analytics). */
+  /** Short label for cards, chips and analytics. */
   shortName: string;
   category: CategorySlug;
   /** One line. What it is and who it is for. */
   positioning: string;
-  /** Two or three sentences for a future product page. */
+  /** 2–3 sentences for the product page overview. */
   description: string;
   image: string;
   imageAlt: string;
+  /** Net content exactly as printed on pack. */
   size?: string;
+  /** Pack configuration, only where confirmed. */
   pack?: string;
-  /** Factual, non-medical. 3–4 items max. */
+  /** Marketed-by / manufactured-by line from the pack. */
+  marketedBy?: string;
+  /** Verbatim actives listed on the pack. Never invent. */
+  ingredients: string[];
+  /** Factual, non-medical feature statements. */
   highlights: string[];
+  /** Only where existing copy supports it. Empty array hides the section. */
+  usage: string[];
+  /** Who the product suits. Empty array hides the section. */
+  suitedFor: string[];
   concerns: ConcernSlug[];
-  /** '' means no confirmed listing — the UI hides the Amazon CTA. */
+  /** '' hides every Amazon CTA for this product. Never fabricate. */
   amazonUrl: string;
-  relatedArticles: RelatedArticle[];
+  /**
+   * Other amzn.in links found in the blog set that appear to belong to
+   * this product (probably single vs pack-of-2 listings). NOT rendered —
+   * documentation only, so the audit trail is not lost.
+   */
+  /** Blog slugs genuinely about this product. Drives two-way linking. */
+  relatedBlogSlugs: string[];
   featured?: boolean;
+  /** Set when something about this entry still needs human confirmation. */
+  needsReview?: string;
 }
 
 export const categories: ProductCategory[] = [
   {
     slug: 'face-care',
     name: 'Face Care',
-    blurb: 'Daily cleansers formulated for Indian skin, climate and water.',
+    blurb: 'Daily and targeted cleansers formulated for Indian skin and water.',
   },
   {
     slug: 'sun-care',
@@ -74,7 +88,8 @@ export const categories: ProductCategory[] = [
   {
     slug: 'skin-care',
     name: 'Skin Care',
-    blurb: 'Lotions and creams for soothing, nourishment and everyday comfort.',
+    blurb:
+      'Lotions, creams and gels for soothing, nourishment and daily comfort.',
   },
   {
     slug: 'hair-care',
@@ -85,7 +100,7 @@ export const categories: ProductCategory[] = [
 
 export const concerns: ProductConcern[] = [
   { slug: 'oil-acne', label: 'Oily & acne-prone skin' },
-  { slug: 'sensitive-skin', label: 'Sensitive skin' },
+  { slug: 'tone-dark-spots', label: 'Uneven tone & dark spots' },
   { slug: 'sun-protection', label: 'Sun protection' },
   { slug: 'soothing-relief', label: 'Soothing & relief' },
   { slug: 'daily-moisture', label: 'Daily moisturisation' },
@@ -93,6 +108,7 @@ export const concerns: ProductConcern[] = [
 ];
 
 export const products: Product[] = [
+  // ── FACE CARE ──────────────────────────────────────────────
   {
     slug: 'fresholite-vitamin-c-face-wash',
     name: 'Fresh O Lite Vitamin C Face Wash',
@@ -101,75 +117,114 @@ export const products: Product[] = [
     positioning:
       'A daily Vitamin C cleanser with natural orange extracts, for oily and combination skin.',
     description:
-      'Fresh O Lite combines Vitamin C with natural orange extracts to cleanse thoroughly without over-stripping the skin. Formulated for daily use, morning and night, on oily and combination skin.',
-    image: '/images/fresholite-facewash.png',
+      'Fresh O Lite combines Vitamin C with natural orange extracts to cleanse thoroughly without over-stripping the skin. It is formulated for daily use, morning and night, and suits oily and combination skin through Indian heat and humidity.',
+    image: '/images/fresholite-vitamin-c-face-wash.png',
     imageAlt:
-      'Fresh O Lite Vitamin C Face Wash with orange extracts, 100 ml, pack of 2',
+      'Fresh O Lite Vitamin C Face Wash with orange extracts, 100 ml, pack of two tubes',
     size: '100 ml',
     pack: 'Pack of 2',
+    marketedBy: 'Plethico Pharmaceuticals Pvt. Ltd.',
+    ingredients: ['Vitamin C', 'Natural orange extracts'],
     highlights: [
       'Vitamin C with natural orange extracts',
       'Cleanses without over-drying',
       'Suitable for daily use, morning and night',
+      'For oily and combination skin',
     ],
-    concerns: ['oil-acne'],
-    // Used by 3 of the 5 Fresh O Lite posts. Two other short links exist
-    // in the other posts — see NOTES, needs reconciling.
+    usage: [
+      'Apply a coin-sized amount to damp skin.',
+      'Massage gently, then rinse thoroughly with water.',
+      'Use twice daily, morning and night.',
+    ],
+    suitedFor: ['Oily skin', 'Combination skin', 'Dull, uneven-looking skin'],
+    concerns: ['oil-acne', 'tone-dark-spots'],
     amazonUrl: 'https://amzn.in/d/05QOka5b',
-    relatedArticles: [
-      {
-        title: 'Best Face Wash for Oily Skin in India (2026 Guide)',
-        href: '/blog/best-face-wash-oily-skin-india-2026',
-      },
-      {
-        title: 'Best Face Wash for Daily Use Without Drying Skin',
-        href: '/blog/best-face-wash-daily-use-without-drying-skin-india',
-      },
-      {
-        title: 'Best Face Wash for Teenagers with Acne in India',
-        href: '/blog/best-face-wash-teenagers-acne-india',
-      },
+    relatedBlogSlugs: [
+      'best-face-wash-oily-skin-india-2026',
+      'best-face-wash-daily-use-without-drying-skin-india',
+      'best-face-wash-teenagers-acne-india',
+      'chemical-vs-natural-face-wash-which-works-better',
+      'face-wash-acne-vs-oily-skin-india',
+      'best-face-wash-acne-prone-skin-india',
     ],
     featured: true,
   },
+  {
+    slug: 'kojicid-facewash',
+    name: 'Kojicid Brightening Facewash',
+    shortName: 'Kojicid Facewash',
+    category: 'face-care',
+    positioning:
+      'A multi-action cleanser with kojic acid, L-glutathione, glycolic and salicylic acid.',
+    description:
+      'Kojicid Brightening Facewash combines four actives in one cleanser. Kojic acid dipalmitate and L-glutathione work on the look of dark spots and uneven tone, glycolic acid gently lifts dead surface cells, and salicylic acid — a BHA — helps clear pores and manage oil. It is an actives-led formula rather than a plain everyday cleanser.',
+    image: '/images/kojicid-brightening-facewash.png',
+    imageAlt: 'Kojicid Brightening Facewash, 70 ml tube, pack of 2',
+    size: '70 ml',
+    pack: 'Pack of 2',
+    marketedBy: 'Tablets (India) Limited',
+    ingredients: [
+      'Kojic acid dipalmitate',
+      'L-glutathione',
+      'Glycolic acid',
+      'Salicylic acid',
+    ],
+    highlights: [
+      'Kojic acid dipalmitate with L-glutathione',
+      'Glycolic acid to lift dead surface cells',
+      'Salicylic acid (BHA) to help clear pores',
+      'Suitable for all skin types',
+    ],
+    usage: [
+      'Apply to damp skin and massage gently.',
+      'Rinse thoroughly with water.',
+      'Use daily for best results.',
+    ],
+    suitedFor: ['Dark spots and marks', 'Uneven skin tone', 'Congested, oily skin'],
+    concerns: ['tone-dark-spots', 'oil-acne'],
+    amazonUrl: 'https://amzn.in/d/0bmAFPGc',
+    relatedBlogSlugs: ['best-face-wash-sensitive-skin-india'],
+  },
+
+  // ── SUN CARE ───────────────────────────────────────────────
   {
     slug: 'freshotil-sunguard-50',
     name: 'Freshotil Sunguard-50 Lotion',
     shortName: 'Freshotil Sunguard-50',
     category: 'sun-care',
     positioning:
-      'SPF 50 broad-spectrum sun screen lotion — water resistant and non-greasy.',
+      'SPF 50 sunscreen lotion with UVA & UVB protection — lightweight and non-greasy.',
     description:
-      'A daily sun screen lotion offering SPF 50 broad-spectrum UVA and UVB protection. The lightweight base is water resistant and non-greasy, which makes it wearable on oily skin through Indian heat and humidity.',
+      'Freshotil Sunguard 50 provides everyday protection against UVA and UVB rays during sun exposure. The lightweight lotion spreads comfortably over exposed skin without a heavy or sticky feel, which makes it practical for commuting, travelling, outdoor exercise or a full day outside.',
     image: '/images/freshotil-sunguard.png',
-    imageAlt: 'Freshotil Sunguard-50 SPF 50 sun screen lotion, 100 ml',
-    size: '100 ml',
-    pack: undefined, // NEEDS USER VALUE — pack size not stated in existing copy
+    imageAlt: 'Freshotil Sunguard-50 SPF 50 sun screen lotion, 100 mL tube',
+    size: '100 mL',
+    pack: undefined,
+    marketedBy: 'Plethico Pharmaceuticals Pvt. Ltd.',
+    ingredients: [],
     highlights: [
-      'SPF 50, UVA and UVB protection',
-      'Water resistant and non-greasy',
-      'Suitable for all skin types',
+      'SPF 50',
+      'UVA & UVB protection',
+      'Lightweight, non-greasy formula',
+      'For daily and outdoor use',
     ],
+    usage: [
+      'Apply before sun exposure, as part of your daily skincare routine.',
+      'Apply generously and evenly to all exposed areas of skin.',
+      'Reapply as directed — especially after swimming, sweating, towelling or prolonged outdoor activity.',
+    ],
+    suitedFor: ['Oily skin', 'Daily outdoor exposure', 'All skin types'],
     concerns: ['sun-protection', 'oil-acne'],
-    // NOTE: three different short links across the three sunscreen posts.
-    // This is the one used by the main SPF guide. See NOTES.
     amazonUrl: 'https://amzn.in/d/04MfDy1G',
-    relatedArticles: [
-      {
-        title: 'Best Sunscreen for Oily Skin in India — SPF Guide',
-        href: '/blog/best-sunscreen-oily-skin-india-spf-guide',
-      },
-      {
-        title: 'Best Sunscreen for Acne-Prone Skin in India',
-        href: '/blog/best-sunscreen-acne-prone-skin-india',
-      },
-      {
-        title: 'Why Sunscreen Matters Even Indoors',
-        href: '/blog/why-sunscreen-important-indoors-india',
-      },
+    relatedBlogSlugs: [
+      'best-sunscreen-oily-skin-india-spf-guide',
+      'best-sunscreen-acne-prone-skin-india',
+      'why-sunscreen-important-indoors-india',
     ],
     featured: true,
   },
+
+  // ── SKIN CARE ──────────────────────────────────────────────
   {
     slug: 'calafine-calamine-lotion',
     name: 'Calafine Calamine Lotion',
@@ -178,36 +233,141 @@ export const products: Product[] = [
     positioning:
       'Calamine lotion with zinc oxide, aloe vera and light liquid paraffin, for face and body.',
     description:
-      'Calafine pairs classic calamine and zinc oxide with aloe vera and light liquid paraffin, so it soothes without the chalky dryness typical of older calamine formulations. Suitable for all skin types, on face and body.',
+      'Calafine pairs classic calamine and zinc oxide with aloe vera and light liquid paraffin, so it soothes without the chalky dryness typical of older calamine formulations. It suits all skin types and can be used on both face and body.',
     image: '/images/calafine-lotion.png',
     imageAlt:
-      'Calafine calamine lotion with zinc oxide, aloe vera and light liquid paraffin, 100 ml',
+      'Calafine calamine lotion with zinc oxide, aloe vera and light liquid paraffin, 100 ml bottles with carton',
     size: '100 ml',
     pack: 'Pack of 2',
+    marketedBy: 'Tablets (India) Limited',
+    ingredients: ['Calamine', 'Zinc oxide', 'Aloe vera', 'Light liquid paraffin'],
     highlights: [
       'Calamine and zinc oxide with aloe vera',
-      'Light liquid paraffin to reduce dryness',
-      'For face and body, all skin types',
+      'Light liquid paraffin to reduce chalky dryness',
+      'For face and body',
+      'Suitable for all skin types',
     ],
+    usage: [
+      'Apply a thin, even layer to clean, dry skin.',
+      'Use on affected areas of the face or body as needed.',
+    ],
+    suitedFor: ['Sun-exposed skin', 'Itchy or irritated skin', 'All skin types'],
     concerns: ['soothing-relief', 'daily-moisture'],
-    // Used by 5 of the 7 calamine posts. See NOTES.
     amazonUrl: 'https://amzn.in/d/0foGtulz',
-    relatedArticles: [
-      {
-        title: 'Calamine Lotion Uses & Benefits — Complete Guide',
-        href: '/blog/calamine-lotion-uses-benefits-calafine-complete-guide-2026',
-      },
-      {
-        title: 'Calamine Lotion for Sunburn Relief',
-        href: '/blog/calamine-lotion-sunburn-relief-guide-india',
-      },
-      {
-        title: 'Best Lotion for Skin Allergies & Rashes',
-        href: '/blog/best-lotion-skin-allergies-rashes-india-calafine',
-      },
+    relatedBlogSlugs: [
+      'calamine-lotion-uses-benefits-calafine-complete-guide-2026',
+      'calafine-lotion-sunburn-relief-acne-care-skin-nourishment',
+      'calamine-lotion-uses-skin-complete-guide',
+      'calamine-lotion-sunburn-relief-guide-india',
+      'calamine-lotion-safe-daily-use-india',
+      'calamine-lotion-vs-moisturizer-difference-india-guide',
+      'best-lotion-skin-allergies-rashes-india-calafine',
     ],
     featured: true,
   },
+  {
+    slug: 'moist-sure-cream',
+    name: 'Moist Sure Cream',
+    shortName: 'Moist Sure Cream',
+    category: 'skin-care',
+    positioning:
+      'A 60 g moisturising cream with aloe vera, Vitamin E and jojoba oil.',
+    description:
+      'Moist Sure Cream is a jar-format moisturiser built around aloe vera, Vitamin E and jojoba oil. It absorbs without a greasy finish, which makes it workable on combination skin as well as drier areas of the body.',
+    image: '/images/moistsure-cream.png',
+    imageAlt:
+      'Moist Sure Cream jar and carton, moisturiser with aloe vera, Vitamin E and jojoba oil, 60 g',
+    size: '60 g',
+    pack: undefined,
+    marketedBy: 'Tablets (India) Limited',
+    ingredients: ['Aloe vera', 'Vitamin E', 'Jojoba oil'],
+    highlights: [
+      'Aloe vera, Vitamin E and jojoba oil',
+      'Non-greasy finish',
+      'For face and body',
+    ],
+    usage: [],
+    suitedFor: ['Combination skin', 'Dry skin', 'Sensitive skin'],
+    concerns: ['daily-moisture'],
+    amazonUrl: 'https://amzn.in/d/0btC4bWY',
+    relatedBlogSlugs: [
+      'best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba',
+      'calamine-lotion-vs-moisturizer-difference-india-guide',
+    ],
+  },
+  {
+    slug: 'moist-sure-lotion',
+    name: 'Moist Sure Lotion',
+    shortName: 'Moist Sure Lotion',
+    category: 'skin-care',
+    positioning:
+      'A body lotion with aloe vera, glycerine, Vitamin E and jojoba oil for deep nourishment.',
+    description:
+      'Moist Sure Lotion combines aloe vera for soothing hydration with glycerine and Vitamin E to help protect against dryness and environmental stress. Jojoba oil, a natural emollient, helps lock in moisture. The lighter lotion texture spreads easily across larger areas of the body.',
+    image: '/images/moist-sure-lotion.png',
+    imageAlt:
+      'Moist Sure Lotion bottle, moisturiser with aloe vera, glycerine, Vitamin E and jojoba oil, 100 mL',
+    size: '100 mL',
+    pack: 'Pack of 2',
+    marketedBy: 'Tablets (India) Limited',
+    ingredients: ['Aloe vera', 'Glycerine', 'Vitamin E', 'Jojoba oil'],
+    highlights: [
+      'Aloe vera for soothing hydration',
+      'Glycerine and Vitamin E to help guard against dryness',
+      'Jojoba oil to help lock in moisture',
+      'Lighter lotion texture for body use',
+    ],
+    usage: [
+      'Apply to clean, dry skin.',
+      'Massage gently until absorbed.',
+      'Use daily, or as often as needed.',
+    ],
+    suitedFor: ['Dry skin', 'Body moisturisation', 'Everyday use'],
+    concerns: ['daily-moisture'],
+    amazonUrl: 'https://amzn.in/d/02RlwKAg',
+    relatedBlogSlugs: [],
+  },
+  {
+    slug: 'kojicid-gel',
+    name: 'Kojicid Gel',
+    shortName: 'Kojicid Gel',
+    category: 'skin-care',
+    positioning:
+      'A brightening gel with kojic acid, Vitamin E and pine bark extract, for dark spots and uneven tone.',
+    description:
+      'Kojicid Gel is a lightweight gel formulated to help reduce the appearance of dark spots, acne marks, sun tan and uneven skin tone. Kojic acid supports skin clarity, Vitamin E nourishes and supports the skin barrier, and pine bark extract supports skin texture. The non-greasy, fast-absorbing texture suits day and night use without clogging pores or leaving residue.',
+    image: '/images/kojicid-gel.png',
+    imageAlt: 'Kojicid Gel brightening gel, 15 g tube, pack of 2',
+    size: '15 g',
+    pack: 'Pack of 2',
+    marketedBy: 'Tablets (India) Limited',
+    ingredients: [
+      'Kojic acid dipalmitate',
+      'Vitamin E acetate',
+      'Pine bark extract',
+      'Arbutin',
+      'Allantoin',
+      'Niacinamide',
+      'Octinoxate',
+    ],
+    highlights: [
+      'Kojic acid with Vitamin E and pine bark extract',
+      'Helps reduce the appearance of dark spots and uneven tone',
+      'Non-greasy, fast-absorbing texture',
+      'Suitable for day and night use',
+    ],
+    usage: [
+      'Apply a small amount to clean, dry skin.',
+      'Spread evenly over the affected area until absorbed.',
+      'Use twice daily, morning and night.',
+    ],
+    suitedFor: ['Dark spots and acne marks', 'Sun tan', 'Uneven skin tone'],
+    concerns: ['tone-dark-spots'],
+    amazonUrl: 'https://amzn.in/d/0gFB5XaA',
+    relatedBlogSlugs: [],
+  },
+
+  // ── HAIR CARE ──────────────────────────────────────────────
   {
     slug: 'hairoshine-advance-hair-oil',
     name: 'HairOShine Advance Hair Oil',
@@ -216,151 +376,48 @@ export const products: Product[] = [
     positioning:
       'Biotin hair oil with basil, brahmi, bhringraj, hibiscus and D-panthenol.',
     description:
-      'A scalp-first hair oil that delivers biotin alongside traditional botanicals — basil, brahmi, bhringraj and hibiscus — in a base light enough for everyday use on fine or thick hair.',
+      'HairOShine Advance is a scalp-first hair oil that delivers biotin alongside traditional botanicals — basil, brahmi, bhringraj and hibiscus — in a base light enough for everyday use on fine or thick hair.',
     image: '/images/hairoshine-biotin-oil.png',
-    imageAlt: 'HairOShine Advance Hair Oil with biotin, 100 ml',
+    imageAlt: 'HairOShine Advance Hair Oil with biotin, 100 ml bottle',
     size: '100 ml',
     pack: 'Pack of 2',
-    highlights: [
-      'With biotin and D-panthenol',
-      'Basil, brahmi, bhringraj and hibiscus',
-      'Non-greasy, for all hair types',
+    marketedBy: 'Volant',
+    ingredients: [
+      'Biotin',
+      'Basil',
+      'Brahmi',
+      'Bhringraj',
+      'Hibiscus',
+      'D-panthenol',
     ],
+    highlights: [
+      'Biotin with D-panthenol',
+      'Basil, brahmi, bhringraj and hibiscus',
+      'Non-greasy base',
+      'For all hair types',
+    ],
+    usage: [
+      'Apply in small drops directly onto the scalp.',
+      'Massage gently to distribute across the scalp.',
+    ],
+    suitedFor: ['Dry hair', 'Frizzy hair', 'Fine and thick hair alike'],
     concerns: ['hair-care'],
-    // NOTE: three different short links across the three hair posts. See NOTES.
     amazonUrl: 'https://amzn.in/d/04hhFpUS',
-    relatedArticles: [
-      {
-        title: 'Best Hair Oil for Hair Growth in India — Biotin Guide',
-        href: '/blog/best-hair-oil-hair-growth-india-biotin',
-      },
-      {
-        title: 'Best Hair Oil for Dry and Frizzy Hair',
-        href: '/blog/best-hair-oil-dry-frizzy-hair-india',
-      },
-      {
-        title: 'How to Choose the Right Hair Oil for Your Hair Type',
-        href: '/blog/how-to-choose-hair-oil-for-your-hair-type-india',
-      },
+    relatedBlogSlugs: [
+      'best-hair-oil-hair-growth-india-biotin',
+      'best-hair-oil-dry-frizzy-hair-india',
+      'how-to-choose-hair-oil-for-your-hair-type-india',
     ],
     featured: true,
-  },
-  {
-    slug: 'moist-sure-cream',
-    name: 'Moist Sure Cream',
-    shortName: 'Moist Sure',
-    category: 'skin-care',
-    positioning:
-      'Aloe vera, Vitamin-E and jojoba oil moisturiser for face and body.',
-    description:
-      'A balanced moisturiser built around aloe vera, Vitamin-E and jojoba oil. Absorbs without a greasy finish, which makes it workable on combination skin as well as dry areas of the body.',
-    image: '/images/moistsure-cream.png',
-    imageAlt:
-      'Moist Sure Cream with aloe vera, Vitamin-E and jojoba oil, pack of 2',
-    size: undefined, // NEEDS USER VALUE — volume not stated in existing copy
-    pack: 'Pack of 2',
-    highlights: [
-      'Aloe vera, Vitamin-E and jojoba oil',
-      'Non-greasy finish',
-      'For face and body',
-    ],
-    concerns: ['daily-moisture', 'sensitive-skin'],
-    amazonUrl: 'https://amzn.in/d/0btC4bWY',
-    relatedArticles: [
-      {
-        title: 'Best Moisturizer for Combination Skin',
-        href: '/blog/best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba',
-      },
-      {
-        title: 'Calamine Lotion vs Moisturizer — What Is the Difference?',
-        href: '/blog/calamine-lotion-vs-moisturizer-difference-india-guide',
-      },
-    ],
-  },
-  {
-    slug: 'fresho-sensitive-face-wash',
-    // NEEDS USER VALUE — exact on-pack product name to confirm.
-    // Derived from the image filename and the sensitive-skin blog post.
-    name: 'Fresho Sensitive Face Wash',
-    shortName: 'Fresho Sensitive',
-    category: 'face-care',
-    positioning: 'A pH-balanced, sulphate-free cleanser for sensitive skin.',
-    description:
-      'A gentle daily cleanser for skin that reacts easily. pH-balanced and sulphate-free, so it cleanses without disrupting the skin barrier.',
-    image: '/images/fresho-sensitive-face-wash.png',
-    imageAlt: 'Fresho Sensitive pH-balanced sulphate-free face wash',
-    size: undefined, // NEEDS USER VALUE
-    pack: undefined, // NEEDS USER VALUE
-    highlights: ['pH-balanced', 'Sulphate-free', 'For sensitive, reactive skin'],
-    concerns: ['sensitive-skin'],
-    amazonUrl: 'https://amzn.in/d/0bmAFPGc',
-    relatedArticles: [
-      {
-        title: 'Best Face Wash for Sensitive Skin in India',
-        href: '/blog/best-face-wash-sensitive-skin-india',
-      },
-      {
-        title: 'Face Wash for Acne vs Oily Skin — What Is Better?',
-        href: '/blog/face-wash-acne-vs-oily-skin-india',
-      },
-    ],
-  },
-  {
-    // Visible in /images/consumer-products-hero.png and
-    // /images/featured-products-background.png. No blog post covers it,
-    // so there is no Amazon link on file. Excluded from rendering by
-    // listableProducts until an image and URL are supplied.
-    slug: 'kojicid-facewash',
-    name: 'Kojicid Facewash',
-    shortName: 'Kojicid Facewash',
-    category: 'face-care',
-    positioning:
-      'A targeted facewash with glutathione, kojic acid dipalmitate, glycolic and salicylic acid.',
-    description:
-      'A targeted cleanser formulated with glutathione, kojic acid dipalmitate, glycolic acid and salicylic acid.',
-    image: '', // NEEDS USER VALUE — no standalone product image in /public/images
-    imageAlt: 'Kojicid Facewash, 70 ml',
-    size: '70 ml',
-    pack: undefined,
-    highlights: [
-      'Glutathione and kojic acid dipalmitate',
-      'With glycolic and salicylic acid',
-    ],
-    concerns: ['oil-acne'],
-    amazonUrl: '', // NEEDS USER VALUE
-    relatedArticles: [],
-  },
-  {
-    slug: 'kojicid-gel',
-    name: 'Kojicid Gel',
-    shortName: 'Kojicid Gel',
-    category: 'skin-care',
-    positioning:
-      'A gel with kojic acid dipalmitate, arbutin, niacinamide and Vitamin E acetate.',
-    description:
-      'A gel formulated with kojic acid dipalmitate, pine bark extract, arbutin, allantoin, Vitamin E acetate, niacinamide and octinoxate.',
-    image: '', // NEEDS USER VALUE — no standalone product image in /public/images
-    imageAlt: 'Kojicid Gel, 15 g',
-    size: '15 g',
-    pack: undefined,
-    highlights: [
-      'Kojic acid dipalmitate with arbutin',
-      'Niacinamide and Vitamin E acetate',
-    ],
-    concerns: [],
-    amazonUrl: '', // NEEDS USER VALUE
-    relatedArticles: [],
-  },
+  }
 ];
 
 // ── Selectors ────────────────────────────────────────────────
-// Pages use these rather than filtering inline, so adding a product
-// never means editing a page component.
 
-export const featuredProducts = products.filter((p) => p.featured);
-
-/** Products complete enough to show publicly. */
+/** Products complete enough to list and to generate a route for. */
 export const listableProducts = products.filter((p) => p.image !== '');
+
+export const featuredProducts = listableProducts.filter((p) => p.featured);
 
 export function getProductsByCategory(category: CategorySlug): Product[] {
   return listableProducts.filter((p) => p.category === category);
@@ -374,7 +431,34 @@ export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
 
+/** Listable products only — used by the dynamic route. */
+export function getListableProductBySlug(slug: string): Product | undefined {
+  return listableProducts.find((p) => p.slug === slug);
+}
+
+/**
+ * Same-category products first, then products sharing a concern.
+ * Returns [] rather than padding with unrelated items.
+ */
+export function getRelatedProducts(product: Product, limit = 3): Product[] {
+  const sameCategory = listableProducts.filter(
+    (p) => p.slug !== product.slug && p.category === product.category
+  );
+  const sharedConcern = listableProducts.filter(
+    (p) =>
+      p.slug !== product.slug &&
+      p.category !== product.category &&
+      p.concerns.some((c) => product.concerns.includes(c))
+  );
+  return [...sameCategory, ...sharedConcern].slice(0, limit);
+}
+
 /** Categories that currently have at least one listable product. */
 export const activeCategories = categories.filter(
   (c) => getProductsByCategory(c.slug).length > 0
 );
+
+/** Canonical product page path. */
+export function productHref(slug: string): string {
+  return `/products/${slug}`;
+}

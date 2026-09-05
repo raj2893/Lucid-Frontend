@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AmazonButton from './AmazonButton';
 import { IconArrowRight } from './Icons';
-import { categories, type Product } from '@/data/products';
+import { categories, productHref, type Product } from '@/data/products';
 import styles from './ProductCard.module.css';
 
 interface ProductCardProps {
@@ -23,9 +23,9 @@ export default function ProductCard({
   const categoryName =
     categories.find((c) => c.slug === product.category)?.name ?? '';
 
-  // Until /products/[slug] exists, "Explore" points at the most relevant
-  // existing article — real content, no dead route.
-  const exploreHref = product.relatedArticles[0]?.href;
+  // Product detail pages now exist, so "Explore" goes to the product,
+  // and the article links live on the product page itself.
+  const exploreHref = productHref(product.slug);
 
   return (
     <article className={styles.card}>

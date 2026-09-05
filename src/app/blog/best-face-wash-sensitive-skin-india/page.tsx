@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './freshosensitive-blog.module.css';
+import RelatedProduct from '@/components/RelatedProduct';
 
 export const metadata: Metadata = {
   title: 'Best Face Wash for Sensitive Skin in India 2026 — Complete Dermatologist Guide',
@@ -942,6 +943,8 @@ export default function FreshoSensitiveBlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedProduct slug="kojicid-facewash" />
 
         {/* ─── FAQ ─────────────────────────────────────────────────────────────── */}
         <section id="faq" className={styles.section}>

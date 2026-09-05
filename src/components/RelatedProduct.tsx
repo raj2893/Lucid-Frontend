@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AmazonButton from './AmazonButton';
 import { IconArrowRight } from './Icons';
-import { getProductBySlug } from '@/data/products';
+import { getProductBySlug, productHref } from '@/data/products';
 import styles from './RelatedProduct.module.css';
 
 interface RelatedProductProps {
@@ -54,8 +54,8 @@ export default function RelatedProduct({
             productName={product.name}
             placement="blog_related_product"
           />
-          <Link href="/products" className={styles.link}>
-            All products
+          <Link href={productHref(product.slug)} className={styles.link}>
+            Explore product
             <IconArrowRight size={15} className={styles.linkIcon} />
           </Link>
         </div>
