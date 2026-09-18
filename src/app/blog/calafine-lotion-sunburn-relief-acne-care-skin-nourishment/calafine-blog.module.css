@@ -179,6 +179,7 @@
 }
 
 .painProblem {
+  font-family: inherit;
   font-weight: 700;
   font-size: 0.95rem;
   color: #003366;
@@ -191,6 +192,22 @@
   color: #4a5568;
   line-height: 1.6;
   margin: 0;
+}
+
+/* ── Inline links in body copy ── */
+.inlineLink {
+  color: #005a9e;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.inlineLink:hover {
+  color: #003366;
+}
+
+.section .usesNote {
+  margin-top: 24px;
 }
 
 /* ── Benefit Blocks ── */

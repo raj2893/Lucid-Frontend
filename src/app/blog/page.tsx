@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 const posts = [
   {
     slug: 'calafine-lotion-sunburn-relief-acne-care-skin-nourishment',
-    title: 'One Lotion, Three Skin Problems Solved: CALAFINE Lotion Review',
+    title: 'Calafine Lotion: Uses, Benefits & How to Use',
     excerpt:
-      'Sunburn, dryness, and acne — three of the most common skin struggles. CALAFINE Lotion tackles all three in one gentle, all-skin-type formula.',
+      'What Calafine calamine lotion is, its key ingredients, its main uses and how to apply it on the face and body.',
     image: '/images/calafine-lotion.png',
-    imageAlt: 'CALAFINE Lotion for sunburn, acne, and deep nourishment',
+    imageAlt: 'Calafine calamine lotion, 100 ml bottles with carton',
     category: 'Skincare',
     date: 'March 9, 2026',
     readTime: '5 min read',

@@ -83,8 +83,8 @@ export const blogs: BlogEntry[] = [
   },
   {
     slug: 'calafine-lotion-sunburn-relief-acne-care-skin-nourishment',
-    title: 'Calafine for sunburn, dryness and acne care',
-    blurb: 'One lotion across three of the most common skin complaints.',
+    title: 'Calafine Lotion: uses, benefits and how to use it',
+    blurb: 'What Calafine is, its key ingredients and how to apply it.',
   },
   {
     slug: 'calamine-lotion-uses-skin-complete-guide',

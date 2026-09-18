@@ -475,6 +475,17 @@ export default function CalaFineCompleteGuidePage() {
             acne — are not occasional events. They are daily realities for most Indians.
             The solution should match the frequency of the problem.
           </p>
+          <p>
+            For a product-focused overview — what is in Calafine, its uses and how to
+            apply it — see{' '}
+            <Link
+              href="/blog/calafine-lotion-sunburn-relief-acne-care-skin-nourishment"
+              className={styles.internalLink}
+            >
+              Calafine Lotion: uses, benefits and how to use it
+            </Link>
+            .
+          </p>
         </section>
 
         {/* ── SECTION 6: CALAFINE BENEFITS ── */}
