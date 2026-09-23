@@ -122,6 +122,39 @@
   text-decoration: underline;
 }
 
+/* ── CATALOGUE PRODUCTS (no photograph yet) ────────────── */
+.heroSingle {
+  max-width: 760px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--color-off-white);
+  border: 1px solid var(--color-border);
+  border-radius: 40px;
+}
+
+.compositionBasis {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+
+.disclaimer {
+  margin-top: 44px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
 /* ── BODY ──────────────────────────────────────────────── */
 .body {
   padding: clamp(48px, 7vw, 76px) 0;

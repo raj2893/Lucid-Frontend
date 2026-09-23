@@ -15,7 +15,7 @@ import {
 import styles from './products.module.css';
 
 export const metadata: Metadata = {
-  title: 'Consumer Products — Skincare, Sun Care & Hair Care',
+  title: 'Skincare, Sun Care & Hair Care Products',
   description:
     'Explore the Lucid Pharmatech consumer range — face wash, sun care, calamine lotion, moisturiser and hair oil. Available on Amazon India.',
   alternates: { canonical: 'https://www.lucidllp.com/products' },
@@ -65,7 +65,7 @@ export default function ProductsPage() {
       <Breadcrumb
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Products', href: '/products' },
+          { name: 'Skincare', href: '/products' },
         ]}
       />
 
@@ -74,7 +74,7 @@ export default function ProductsPage() {
         <div className="container">
           <div className={styles.heroGrid}>
             <div className={styles.heroText}>
-              <span className="section-label">Consumer Products</span>
+              <span className="section-label">Skincare & Personal Care</span>
               <div className="divider" />
               <h1 id="products-heading">
                 Skincare, sun care and hair care from a pharmaceutical company

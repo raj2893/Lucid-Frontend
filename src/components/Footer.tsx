@@ -83,7 +83,8 @@ export default function Footer() {
                 <h3 className={styles.colTitle}>Products</h3>
                 <ul className={styles.linkList}>
                   {[
-                    { href: '/products', label: 'All Consumer Products' },
+                    { href: '/product-catalogue', label: 'Medicines' },
+                    { href: '/products', label: 'All Skincare Products' },
                     { href: '/products#face-care', label: 'Face Care' },
                     { href: '/products#sun-care', label: 'Sun Care' },
                     { href: '/products#skin-care', label: 'Skin Care' },

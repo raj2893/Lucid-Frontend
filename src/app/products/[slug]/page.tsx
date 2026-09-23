@@ -100,7 +100,7 @@ export default async function ProductDetailPage({ params }: ParamsArg) {
       <Breadcrumb
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Products', href: '/products' },
+          { name: 'Skincare', href: '/products' },
           { name: product.name, href: productHref(product.slug) },
         ]}
       />

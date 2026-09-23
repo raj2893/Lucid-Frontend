@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { listableProducts } from '@/data/products';
+import { catalogueRouteProducts } from '@/data/catalogue';
 
 const BASE = 'https://www.lucidllp.com';
 
@@ -62,7 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/products', 0.9, 'weekly'),
     // Product pages come straight from the data file — adding a product
     // adds its sitemap entry automatically.
-    ...listableProducts.map((p) => entry(`/products/${p.slug}`, 0.8, 'monthly')),    
+    ...listableProducts.map((p) => entry(`/products/${p.slug}`, 0.8, 'monthly')),
+    entry('/product-catalogue', 0.9, 'weekly'),
+    // Catalogue pages: published entries with their own route only.
+    ...catalogueRouteProducts.map((p) =>
+      entry(`/product-catalogue/${p.slug}`, 0.6, 'monthly')
+    ),    
     ...corePages
       .filter((p) => p !== '' && p !== '/products')
       .map((p) => entry(p, 0.8, 'monthly')),

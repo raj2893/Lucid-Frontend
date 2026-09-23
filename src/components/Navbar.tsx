@@ -8,7 +8,8 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
+  { href: '/product-catalogue', label: 'Medicines' },
+  { href: '/products', label: 'Skincare' },
   { href: '/about', label: 'About' },
   { href: '/quality', label: 'Quality' },
   { href: '/strengths', label: 'Capabilities' },
@@ -61,8 +62,8 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className={styles.actions}>
-          <Link href="/products" className={styles.cta}>
-            Explore Products
+          <Link href="/product-catalogue" className={styles.cta}>
+            Explore Medicines
           </Link>
 
           {/* Mobile toggle */}
