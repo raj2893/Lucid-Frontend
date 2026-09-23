@@ -9,7 +9,7 @@
 //  SEO <title> of each article lives in that article's own metadata and
 //  is not affected by anything in this file.
 //
-//  All 21 article routes under src/app/blog/ are represented.
+//  All 25 article routes under src/app/blog/ are represented.
 // ─────────────────────────────────────────────────────────────
 
 export interface BlogEntry {
@@ -53,6 +53,11 @@ export const blogs: BlogEntry[] = [
     blurb: 'The two are not the same problem, and need different cleansers.',
   },
   {
+    slug: 'best-face-wash-whiteheads-blackheads-india',
+    title: 'Best face wash for whiteheads and blackheads',
+    blurb: 'Clogged pores, salicylic acid and the mistakes that bring them back.',
+  },
+  {
     slug: 'chemical-vs-natural-face-wash-which-works-better',
     title: 'Chemical vs natural face wash',
     blurb: 'What the labels mean and what your cleanser is actually doing.',
@@ -68,6 +73,11 @@ export const blogs: BlogEntry[] = [
     slug: 'best-sunscreen-acne-prone-skin-india',
     title: 'Best sunscreen for acne-prone skin',
     blurb: 'Protecting acne-prone skin without clogging pores.',
+  },
+  {
+    slug: 'moisturizer-with-spf-vs-sunscreen-oily-skin-india',
+    title: 'Moisturiser with SPF vs sunscreen for oily skin',
+    blurb: 'Why an SPF moisturiser is rarely enough, and the right morning order.',
   },
   {
     slug: 'why-sunscreen-important-indoors-india',
@@ -114,9 +124,21 @@ export const blogs: BlogEntry[] = [
 
   // ── Moisturiser ──────────────────────────────────────────
   {
+    slug: 'moist-sure-lotion-cream-uses-benefits-how-to-use',
+    title: 'Moist Sure Lotion & Cream: uses and how to use',
+    blurb: 'What each format does, which one to pick, and how to apply it.',
+  },
+  {
     slug: 'best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba',
     title: 'Best moisturiser for combination skin',
     blurb: 'Oily T-zone with dry cheeks, and how to treat both at once.',
+  },
+
+  // ── Dark spots / uneven tone ─────────────────────────────
+  {
+    slug: 'kojic-acid-dark-spots-acne-marks-india-guide',
+    title: 'Kojic acid for dark spots and acne marks',
+    blurb: 'How kojic acid works, a safe routine and an honest results timeline.',
   },
 
   // ── Hair care ────────────────────────────────────────────

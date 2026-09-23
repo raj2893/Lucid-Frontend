@@ -17,6 +17,50 @@ export const metadata: Metadata = {
 // ─────────────────────────────────────────────────────────────
 const posts = [
   {
+    slug: 'best-face-wash-whiteheads-blackheads-india',
+    title: 'Best Face Wash for Whiteheads & Blackheads in India',
+    excerpt:
+      'Whiteheads and blackheads are clogged pores, not dirt. Which face wash ingredients help clear them, a simple routine for Indian heat and humidity, and the mistakes that keep them coming back.',
+    image: '/images/kojicid-brightening-facewash.png',
+    imageAlt: 'Kojicid Brightening Facewash with salicylic acid and glycolic acid',
+    category: 'Face Wash',
+    date: 'September 23, 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'moisturizer-with-spf-vs-sunscreen-oily-skin-india',
+    title: 'Moisturiser With SPF vs Sunscreen for Oily Skin in India',
+    excerpt:
+      'Is an SPF moisturiser enough for oily skin? Why the amount you apply matters more than the label, the right morning order, and a non-greasy two-step routine.',
+    image: '/images/freshotil-sunguard.png',
+    imageAlt: 'Freshotil Sunguard-50 SPF 50 sunscreen lotion for oily skin',
+    category: 'Sunscreen',
+    date: 'September 23, 2026',
+    readTime: '7 min read',
+  },
+  {
+    slug: 'kojic-acid-dark-spots-acne-marks-india-guide',
+    title: 'Kojic Acid for Dark Spots & Acne Marks: Complete Guide for Indian Skin',
+    excerpt:
+      'Dark spots, acne marks and stubborn tan? How kojic acid works, how to use Kojicid Gel and Facewash safely, what results to expect and why sunscreen decides everything.',
+    image: '/images/kojicid-gel.png',
+    imageAlt: 'Kojicid Gel with kojic acid for dark spots and uneven skin tone',
+    category: 'Skincare',
+    date: 'September 23, 2026',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'moist-sure-lotion-cream-uses-benefits-how-to-use',
+    title: 'Moist Sure Lotion & Cream: Uses, Benefits & How to Use',
+    excerpt:
+      'What Moist Sure Lotion and Moist Sure Cream are used for, their key ingredients, which one suits you, and how to apply them for dry skin on the face and body.',
+    image: '/images/moist-sure-lotion.png',
+    imageAlt: 'Moist Sure Lotion with aloe vera, glycerine, Vitamin E and jojoba oil',
+    category: 'Moisturizers',
+    date: 'September 23, 2026',
+    readTime: '7 min read',
+  },
+  {
     slug: 'calafine-lotion-sunburn-relief-acne-care-skin-nourishment',
     title: 'Calafine Lotion: Uses, Benefits & How to Use',
     excerpt:

@@ -26,6 +26,7 @@ const blogPosts = [
   '/blog/best-face-wash-oily-skin-india-2026',
   '/blog/best-face-wash-sensitive-skin-india',
   '/blog/best-face-wash-teenagers-acne-india',
+  '/blog/best-face-wash-whiteheads-blackheads-india',
   '/blog/best-hair-oil-dry-frizzy-hair-india',
   '/blog/best-hair-oil-hair-growth-india-biotin',
   '/blog/best-lotion-skin-allergies-rashes-india-calafine',
@@ -41,6 +42,9 @@ const blogPosts = [
   '/blog/chemical-vs-natural-face-wash-which-works-better',
   '/blog/face-wash-acne-vs-oily-skin-india',
   '/blog/how-to-choose-hair-oil-for-your-hair-type-india',
+  '/blog/kojic-acid-dark-spots-acne-marks-india-guide',
+  '/blog/moist-sure-lotion-cream-uses-benefits-how-to-use',
+  '/blog/moisturizer-with-spf-vs-sunscreen-oily-skin-india',
   '/blog/why-sunscreen-important-indoors-india',
 ];
 

@@ -146,6 +146,7 @@ export const products: Product[] = [
       'chemical-vs-natural-face-wash-which-works-better',
       'face-wash-acne-vs-oily-skin-india',
       'best-face-wash-acne-prone-skin-india',
+      'best-face-wash-whiteheads-blackheads-india',
     ],
     featured: true,
   },
@@ -183,7 +184,11 @@ export const products: Product[] = [
     suitedFor: ['Dark spots and marks', 'Uneven skin tone', 'Congested, oily skin'],
     concerns: ['tone-dark-spots', 'oil-acne'],
     amazonUrl: 'https://amzn.in/d/0bmAFPGc',
-    relatedBlogSlugs: ['best-face-wash-sensitive-skin-india'],
+    relatedBlogSlugs: [
+      'kojic-acid-dark-spots-acne-marks-india-guide',
+      'best-face-wash-whiteheads-blackheads-india',
+      'best-face-wash-sensitive-skin-india',
+    ],
   },
 
   // ── SUN CARE ───────────────────────────────────────────────
@@ -220,6 +225,8 @@ export const products: Product[] = [
       'best-sunscreen-oily-skin-india-spf-guide',
       'best-sunscreen-acne-prone-skin-india',
       'why-sunscreen-important-indoors-india',
+      'kojic-acid-dark-spots-acne-marks-india-guide',
+      'moisturizer-with-spf-vs-sunscreen-oily-skin-india',
     ],
     featured: true,
   },
@@ -291,7 +298,9 @@ export const products: Product[] = [
     concerns: ['daily-moisture'],
     amazonUrl: 'https://amzn.in/d/0btC4bWY',
     relatedBlogSlugs: [
+      'moist-sure-lotion-cream-uses-benefits-how-to-use',
       'best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba',
+      'moisturizer-with-spf-vs-sunscreen-oily-skin-india',
       'calamine-lotion-vs-moisturizer-difference-india-guide',
     ],
   },
@@ -325,7 +334,7 @@ export const products: Product[] = [
     suitedFor: ['Dry skin', 'Body moisturisation', 'Everyday use'],
     concerns: ['daily-moisture'],
     amazonUrl: 'https://amzn.in/d/02RlwKAg',
-    relatedBlogSlugs: [],
+    relatedBlogSlugs: ['moist-sure-lotion-cream-uses-benefits-how-to-use'],
   },
   {
     slug: 'kojicid-gel',
@@ -364,7 +373,7 @@ export const products: Product[] = [
     suitedFor: ['Dark spots and acne marks', 'Sun tan', 'Uneven skin tone'],
     concerns: ['tone-dark-spots'],
     amazonUrl: 'https://amzn.in/d/0gFB5XaA',
-    relatedBlogSlugs: [],
+    relatedBlogSlugs: ['kojic-acid-dark-spots-acne-marks-india-guide'],
   },
 
   // ── HAIR CARE ──────────────────────────────────────────────
