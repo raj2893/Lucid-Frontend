@@ -63,6 +63,12 @@ export interface CatalogueProduct {
   /** Links this row to an existing consumer page in ./products.ts. */
   consumerSlug?: string;
   availability?: 'coming-soon';
+  /**
+   * Shows the product in the "In Focus" section at the top of the
+   * catalogue. Set `highlighted: true` on any published entry; order
+   * there follows the order of entries in catalogue-products.ts.
+   */
+  highlighted?: boolean;
   /** 'draft' = kept in data, never listed, routed or indexed. */
   status: 'published' | 'draft';
   /**
@@ -113,6 +119,9 @@ export const publishedCatalogue = catalogueProducts.filter(
 export const catalogueRouteProducts = publishedCatalogue.filter(
   (p) => !p.consumerSlug
 );
+
+/** Flagged products, for the "In Focus" section. Drafts never appear. */
+export const highlightedCatalogue = publishedCatalogue.filter((p) => p.highlighted);
 
 export function getCatalogueProduct(slug: string): CatalogueProduct | undefined {
   return catalogueRouteProducts.find((p) => p.slug === slug);

@@ -10,11 +10,13 @@ import { IconArrowRight } from '@/components/Icons';
 import {
   CATALOGUE_PATH,
   publishedCatalogue,
+  highlightedCatalogue,
   activeCatalogueForms,
   catalogueHref,
   catalogueSummary,
   catalogueSearchIndex,
   cataloguePackLabel,
+  getCatalogueForm,
 } from '@/data/catalogue';
 import CatalogueBrowser, {
   type CatalogueListItem,
@@ -104,6 +106,58 @@ export default function ProductCataloguePage() {
           </p>
         </div>
       </section>
+
+      {/* ── In focus ─────────────────────────────────────────
+          Renders every entry with `highlighted: true`. Hidden when
+          nothing is flagged, so the page degrades on its own. */}
+      {highlightedCatalogue.length > 0 && (
+        <section className={styles.focus} aria-labelledby="focus-heading">
+          <div className="container">
+            <div className={styles.focusHead}>
+              <span className="section-label">In Focus</span>
+              <div className="divider" />
+              <h2 id="focus-heading">Products in focus</h2>
+              <p>
+                A closer look at products we are currently highlighting from the
+                range.
+              </p>
+            </div>
+
+            <ul className={styles.focusGrid}>
+              {highlightedCatalogue.map((product) => {
+                const form = getCatalogueForm(product.form);
+                const packs = cataloguePackLabel(product);
+                return (
+                  <li key={product.slug}>
+                    <Link
+                      href={catalogueHref(product)}
+                      className={styles.focusCard}
+                    >
+                      <span className={styles.focusMeta}>
+                        {form?.name}
+                        {product.availability === 'coming-soon' && (
+                          <span className={styles.focusBadge}>Coming soon</span>
+                        )}
+                      </span>
+                      <h3 className={styles.focusName}>{product.name}</h3>
+                      {(product.description || catalogueSummary(product)) && (
+                        <p className={styles.focusSummary}>
+                          {product.description ?? catalogueSummary(product)}
+                        </p>
+                      )}
+                      {packs && <p className={styles.focusPacks}>{packs}</p>}
+                      <span className={styles.focusLink}>
+                        View product
+                        <IconArrowRight size={14} />
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* ── Catalogue ────────────────────────────────────── */}
       <section className={styles.listing}>

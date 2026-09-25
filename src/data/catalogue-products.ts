@@ -24,12 +24,12 @@ export const catalogueProducts: CatalogueProduct[] = [
   {
     slug: 'vonoluc-20',
     name: 'VONOLUC-20',
+    highlighted: true,
     form: 'tablets',
     composition: ['Vonoprazan Tablets 20 mg (P-CAB)'],
     packs: [{ size: '10 x 10 Tabs.', mrp: 280, mrpUnit: 'Strip' }],
     indications: ['GERD', 'Erosive Esophagitis', 'NERD', 'Peptic Ulcer Disease', 'H. pylori eradication (with antibiotics)', 'Zollinger-Ellison Syndrome'],
     family: 'vonoluc',
-    availability: 'coming-soon',
     status: 'published',
     image: null,
     cataloguePage: 3,
