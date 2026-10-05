@@ -147,6 +147,7 @@ export const products: Product[] = [
       'face-wash-acne-vs-oily-skin-india',
       'best-face-wash-acne-prone-skin-india',
       'best-face-wash-whiteheads-blackheads-india',
+      'vitamin-c-face-wash-benefits-uses-how-to-use',
     ],
     featured: true,
   },
@@ -416,6 +417,7 @@ export const products: Product[] = [
       'best-hair-oil-hair-growth-india-biotin',
       'best-hair-oil-dry-frizzy-hair-india',
       'how-to-choose-hair-oil-for-your-hair-type-india',
+      'how-to-oil-hair-properly-how-long-overnight-india',
     ],
     featured: true,
   }

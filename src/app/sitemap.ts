@@ -45,6 +45,8 @@ const blogPosts = [
   '/blog/kojic-acid-dark-spots-acne-marks-india-guide',
   '/blog/moist-sure-lotion-cream-uses-benefits-how-to-use',
   '/blog/moisturizer-with-spf-vs-sunscreen-oily-skin-india',
+  '/blog/vitamin-c-face-wash-benefits-uses-how-to-use',
+  '/blog/how-to-oil-hair-properly-how-long-overnight-india',
   '/blog/why-sunscreen-important-indoors-india',
 ];
 

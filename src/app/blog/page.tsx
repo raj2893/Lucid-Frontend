@@ -17,6 +17,28 @@ export const metadata: Metadata = {
 // ─────────────────────────────────────────────────────────────
 const posts = [
   {
+    slug: 'vitamin-c-face-wash-benefits-uses-how-to-use',
+    title: 'Vitamin C Face Wash: Benefits, Uses & How to Use It',
+    excerpt:
+      'What a Vitamin C face wash can genuinely do in the minute it spends on your skin, who it suits, how to use it morning and night, and whether you still need a serum.',
+    image: '/images/fresholite-vitamin-c-face-wash.png',
+    imageAlt: 'Fresh O Lite Vitamin C Face Wash with orange extracts',
+    category: 'Face Wash',
+    date: 'October 5, 2026',
+    readTime: '7 min read',
+  },
+  {
+    slug: 'how-to-oil-hair-properly-how-long-overnight-india',
+    title: 'How to Oil Hair Properly: How Long, How Often & Overnight?',
+    excerpt:
+      'How much oil to use, how long to leave it in, whether overnight oiling helps or hurts, how often to oil for your hair type, and how to wash it out without stripping your hair.',
+    image: '/images/hairoshine-biotin-oil.png',
+    imageAlt: 'HairOShine Advance Hair Oil with biotin',
+    category: 'Hair Care',
+    date: 'October 5, 2026',
+    readTime: '8 min read',
+  },
+  {
     slug: 'best-face-wash-whiteheads-blackheads-india',
     title: 'Best Face Wash for Whiteheads & Blackheads in India',
     excerpt:

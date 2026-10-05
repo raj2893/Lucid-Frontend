@@ -9,7 +9,7 @@
 //  SEO <title> of each article lives in that article's own metadata and
 //  is not affected by anything in this file.
 //
-//  All 25 article routes under src/app/blog/ are represented.
+//  All 27 article routes under src/app/blog/ are represented.
 // ─────────────────────────────────────────────────────────────
 
 export interface BlogEntry {
@@ -56,6 +56,11 @@ export const blogs: BlogEntry[] = [
     slug: 'best-face-wash-whiteheads-blackheads-india',
     title: 'Best face wash for whiteheads and blackheads',
     blurb: 'Clogged pores, salicylic acid and the mistakes that bring them back.',
+  },
+  {
+    slug: 'vitamin-c-face-wash-benefits-uses-how-to-use',
+    title: 'Vitamin C face wash: benefits and how to use it',
+    blurb: 'What a Vitamin C cleanser can and cannot do, and who it suits.',
   },
   {
     slug: 'chemical-vs-natural-face-wash-which-works-better',
@@ -151,6 +156,11 @@ export const blogs: BlogEntry[] = [
     slug: 'best-hair-oil-dry-frizzy-hair-india',
     title: 'Best hair oil for dry and frizzy hair',
     blurb: 'Cuticle damage, moisture loss and frizz control.',
+  },
+  {
+    slug: 'how-to-oil-hair-properly-how-long-overnight-india',
+    title: 'How to oil hair properly: how long and how often',
+    blurb: 'Overnight or not, how often by hair type, and how to wash it out.',
   },
   {
     slug: 'how-to-choose-hair-oil-for-your-hair-type-india',
