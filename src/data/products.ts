@@ -189,6 +189,7 @@ export const products: Product[] = [
       'kojic-acid-dark-spots-acne-marks-india-guide',
       'best-face-wash-whiteheads-blackheads-india',
       'best-face-wash-sensitive-skin-india',
+      'how-to-remove-sun-tan-face-body-india',
     ],
   },
 
@@ -228,6 +229,8 @@ export const products: Product[] = [
       'why-sunscreen-important-indoors-india',
       'kojic-acid-dark-spots-acne-marks-india-guide',
       'moisturizer-with-spf-vs-sunscreen-oily-skin-india',
+      'winter-skincare-routine-india-dry-skin',
+      'how-to-remove-sun-tan-face-body-india',
     ],
     featured: true,
   },
@@ -303,6 +306,7 @@ export const products: Product[] = [
       'best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba',
       'moisturizer-with-spf-vs-sunscreen-oily-skin-india',
       'calamine-lotion-vs-moisturizer-difference-india-guide',
+      'winter-skincare-routine-india-dry-skin',
     ],
   },
   {
@@ -335,7 +339,10 @@ export const products: Product[] = [
     suitedFor: ['Dry skin', 'Body moisturisation', 'Everyday use'],
     concerns: ['daily-moisture'],
     amazonUrl: 'https://amzn.in/d/02RlwKAg',
-    relatedBlogSlugs: ['moist-sure-lotion-cream-uses-benefits-how-to-use'],
+    relatedBlogSlugs: [
+      'moist-sure-lotion-cream-uses-benefits-how-to-use',
+      'winter-skincare-routine-india-dry-skin',
+    ],
   },
   {
     slug: 'kojicid-gel',
@@ -374,7 +381,10 @@ export const products: Product[] = [
     suitedFor: ['Dark spots and acne marks', 'Sun tan', 'Uneven skin tone'],
     concerns: ['tone-dark-spots'],
     amazonUrl: 'https://amzn.in/d/0gFB5XaA',
-    relatedBlogSlugs: ['kojic-acid-dark-spots-acne-marks-india-guide'],
+    relatedBlogSlugs: [
+      'kojic-acid-dark-spots-acne-marks-india-guide',
+      'how-to-remove-sun-tan-face-body-india',
+    ],
   },
 
   // ── HAIR CARE ──────────────────────────────────────────────

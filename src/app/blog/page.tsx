@@ -17,6 +17,28 @@ export const metadata: Metadata = {
 // ─────────────────────────────────────────────────────────────
 const posts = [
   {
+    slug: 'winter-skincare-routine-india-dry-skin',
+    title: 'Winter Skincare Routine for India: Fix Dry, Flaky Skin',
+    excerpt:
+      'Tight face, flaky shins and itchy legs every winter? Why cold weather dries out your skin, a simple morning and night routine that fixes it, and the habits that make dryness worse.',
+    image: '/images/moist-sure-lotion.png',
+    imageAlt: 'Moist Sure Lotion for dry skin in winter',
+    category: 'Skincare',
+    date: 'October 6, 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'how-to-remove-sun-tan-face-body-india',
+    title: 'How to Remove Sun Tan From Face, Hands & Body: A Real Guide',
+    excerpt:
+      'What sun tan really is, how long it takes to fade, what actually helps on the face, hands and feet, which home remedies to skip, and how to stop tan coming back.',
+    image: '/images/freshotil-sunguard.png',
+    imageAlt: 'Freshotil Sunguard-50 SPF 50 sunscreen to help prevent sun tan',
+    category: 'Sunscreen',
+    date: 'October 6, 2026',
+    readTime: '9 min read',
+  },
+  {
     slug: 'vitamin-c-face-wash-benefits-uses-how-to-use',
     title: 'Vitamin C Face Wash: Benefits, Uses & How to Use It',
     excerpt:

@@ -9,7 +9,7 @@
 //  SEO <title> of each article lives in that article's own metadata and
 //  is not affected by anything in this file.
 //
-//  All 27 article routes under src/app/blog/ are represented.
+//  All 29 article routes under src/app/blog/ are represented.
 // ─────────────────────────────────────────────────────────────
 
 export interface BlogEntry {
@@ -85,6 +85,11 @@ export const blogs: BlogEntry[] = [
     blurb: 'Why an SPF moisturiser is rarely enough, and the right morning order.',
   },
   {
+    slug: 'how-to-remove-sun-tan-face-body-india',
+    title: 'How to remove sun tan from face and body',
+    blurb: 'How long tan takes to fade, what helps, and which remedies to skip.',
+  },
+  {
     slug: 'why-sunscreen-important-indoors-india',
     title: 'Why sunscreen matters even indoors',
     blurb: 'UV through glass, and what indoor exposure really adds up to.',
@@ -132,6 +137,11 @@ export const blogs: BlogEntry[] = [
     slug: 'moist-sure-lotion-cream-uses-benefits-how-to-use',
     title: 'Moist Sure Lotion & Cream: uses and how to use',
     blurb: 'What each format does, which one to pick, and how to apply it.',
+  },
+  {
+    slug: 'winter-skincare-routine-india-dry-skin',
+    title: 'Winter skincare routine for Indian skin',
+    blurb: 'Why skin dries out in winter, and a simple routine to fix it.',
   },
   {
     slug: 'best-moisturizer-combination-skin-aloe-vera-vitamin-e-jojoba',
