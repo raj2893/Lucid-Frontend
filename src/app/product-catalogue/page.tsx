@@ -17,11 +17,13 @@ import {
   catalogueSearchIndex,
   cataloguePackLabel,
   getCatalogueForm,
+  catalogueImage
 } from '@/data/catalogue';
 import CatalogueBrowser, {
   type CatalogueListItem,
 } from '@/components/CatalogueBrowser';
 import styles from './catalogue.module.css';
+import ProductPhoto from '@/components/ProductPhoto';
 
 const SITE = 'https://www.lucidllp.com';
 const URL = `${SITE}${CATALOGUE_PATH}`;
@@ -76,6 +78,7 @@ const catalogueItems: CatalogueListItem[] = publishedCatalogue.map((p) => ({
   packs: cataloguePackLabel(p),
   comingSoon: p.availability === 'coming-soon',
   search: catalogueSearchIndex(p),
+  image: catalogueImage(p),
 }));
 
 export default function ProductCataloguePage() {
@@ -127,12 +130,23 @@ export default function ProductCataloguePage() {
               {highlightedCatalogue.map((product) => {
                 const form = getCatalogueForm(product.form);
                 const packs = cataloguePackLabel(product);
+                const img = catalogueImage(product);
                 return (
                   <li key={product.slug}>
                     <Link
                       href={catalogueHref(product)}
                       className={styles.focusCard}
                     >
+                      {img && (
+                        <ProductPhoto
+                          src={img.src}
+                          alt=""
+                          width={480}
+                          height={320}
+                          cdn={img.cdn}
+                          className={styles.focusImage}
+                        />
+                      )}                      
                       <span className={styles.focusMeta}>
                         {form?.name}
                         {product.availability === 'coming-soon' && (

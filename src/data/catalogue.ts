@@ -14,6 +14,7 @@
 
 import { products, productHref } from './products';
 import { catalogueProducts } from './catalogue-products';
+import { productImageKeys } from './product-images';
 
 export type FormSlug =
   | 'tablets'
@@ -192,6 +193,27 @@ export function cataloguePackLabel(p: CatalogueProduct): string {
     .join(' · ');
 }
 
+export interface CatalogueImage {
+  src: string;
+  alt: string;
+  cdn: boolean;
+}
+
+export function catalogueImageKey(slug: string): string {
+  return slug.replace(/-/g, '');
+}
+
+export function catalogueImage(p: CatalogueProduct): CatalogueImage | null {
+  if (p.image) return { src: p.image, alt: p.imageAlt ?? p.name, cdn: false };
+  const key = catalogueImageKey(p.slug);
+  if (!productImageKeys.has(key)) return null;
+  return {
+    src: `/products/${key}/${key}1.png`,
+    alt: p.imageAlt ?? `${p.name} pack — Lucid Pharmatech`,
+    cdn: true,
+  };
+}
+
 // ── Build-time integrity checks ──────────────────────────────
 // Fail the build rather than ship two products on one URL.
 (() => {
@@ -215,4 +237,17 @@ export function cataloguePackLabel(p: CatalogueProduct): string {
     }
     seen.add(p.slug);
   }
+
+  const keys = new Map<string, string>();
+  for (const p of catalogueProducts) {
+    const key = catalogueImageKey(p.slug);
+    const other = keys.get(key);
+    if (other) throw new Error(`catalogue: "${p.slug}" and "${other}" share image key "${key}"`);
+    keys.set(key, p.slug);
+  }
+  for (const key of productImageKeys) {
+    if (!keys.has(key)) {
+      throw new Error(`catalogue: image key "${key}" matches no product slug`);
+    }
+  }  
 })();

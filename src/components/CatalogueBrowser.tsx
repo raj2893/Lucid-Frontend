@@ -7,6 +7,8 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import styles from './CatalogueBrowser.module.css';
+import ProductPhoto from '@/components/ProductPhoto';
+import type { CatalogueImage } from '@/data/catalogue';
 
 export interface CatalogueListItem {
   slug: string;
@@ -16,6 +18,7 @@ export interface CatalogueListItem {
   summary: string;
   packs: string;
   comingSoon: boolean;
+  image: CatalogueImage | null;
 }
 
 export interface CatalogueFormOption {
@@ -128,6 +131,16 @@ export default function CatalogueBrowser({ items, forms }: CatalogueBrowserProps
                   {/* prefetch off: hundreds of links would otherwise
                       trigger hundreds of background requests on scroll. */}
                   <Link href={item.href} prefetch={false} className={styles.card}>
+                    {item.image && (
+                      <ProductPhoto
+                        src={item.image.src}
+                        alt=""
+                        width={480}
+                        height={320}
+                        cdn={item.image.cdn}
+                        className={styles.thumb}
+                      />
+                    )}                  
                     <span className={styles.name}>
                       {item.name}
                       {item.comingSoon && <span className={styles.badge}>Coming soon</span>}

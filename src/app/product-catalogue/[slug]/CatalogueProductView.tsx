@@ -4,7 +4,8 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
+import ProductPhoto from '@/components/ProductPhoto';
+import { cdnImageUrl } from '@/lib/cdn-image';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaOrg from '@/components/SchemaOrg';
 import { IconArrowRight } from '@/components/Icons';
@@ -18,12 +19,17 @@ import {
   getCatalogueFamily,
   getCatalogueForm,
   type CatalogueProduct,
+  catalogueImage,
+  type CatalogueImage
 } from '@/data/catalogue';
 // Shares the consumer product page's stylesheet so both detail layouts
 // stay visually identical. No CSS is duplicated.
 import styles from '../../products/[slug]/product.module.css';
 
 const SITE = 'https://www.lucidllp.com';
+function shareImageUrl(img: CatalogueImage): string {
+  return img.cdn ? cdnImageUrl(img.src, 960, 'jpeg') : `${SITE}${img.src}`;
+}
 
 function formatMrp(mrp: number | null, unit: string | null): string | null {
   if (mrp === null) return null;
@@ -36,6 +42,7 @@ export function catalogueMetadata(product: CatalogueProduct): Metadata {
   const title = `${product.name} (${form?.name ?? 'Product'})`;
   const summary = catalogueSummary(product);
   const packs = cataloguePackLabel(product);
+  const img = catalogueImage(product);
   const description = [
     `${product.name}${summary ? `: ${summary}` : ''}.`,
     packs ? `Pack: ${packs}.` : '',
@@ -56,15 +63,15 @@ export function catalogueMetadata(product: CatalogueProduct): Metadata {
       locale: 'en_IN',
       title: `${title} | Lucid Pharmatech LLP`,
       description,
-      images: product.image
-        ? [{ url: product.image, alt: product.imageAlt ?? product.name }]
+      images: img
+      ? [{ url: shareImageUrl(img), alt: img.alt }]
         : [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Lucid Pharmatech LLP' }],
     },
     twitter: {
-      card: product.image ? 'summary_large_image' : 'summary',
+      card: img ? 'summary_large_image' : 'summary',
       title: `${title} | Lucid Pharmatech LLP`,
       description,
-      images: [product.image ?? '/og-image.jpg'],
+      images: [img ? shareImageUrl(img) : '/og-image.jpg'],
     },
   };
 }
@@ -76,6 +83,7 @@ export default function CatalogueProductView({ product }: { product: CataloguePr
   const showIndications =
     CATALOGUE_DISPLAY.showIndications && (product.indications?.length ?? 0) > 0;
   const formHref = `${CATALOGUE_PATH}#catalogue-${product.form}`;
+  const img = catalogueImage(product);
 
   // Product schema with confirmed fields only: no offers, price, rating
   // or review. Image only once a real photograph exists.
@@ -87,7 +95,7 @@ export default function CatalogueProductView({ product }: { product: CataloguePr
     url: `${SITE}${catalogueProductHref(product.slug)}`,
     category: form?.name,
     brand: { '@type': 'Brand', name: 'Lucid Pharmatech LLP' },
-    ...(product.image ? { image: `${SITE}${product.image}` } : {}),
+    ...(img ? { image: shareImageUrl(img) } : {}),
   };
 
   return (
@@ -104,18 +112,19 @@ export default function CatalogueProductView({ product }: { product: CataloguePr
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className={styles.hero}>
         <div className="container">
-          <div className={product.image ? styles.heroGrid : styles.heroSingle}>
-            {product.image && (
+          <div className={img ? styles.heroGrid : styles.heroSingle}>
+            {img && (
               <div className={styles.heroMedia}>
                 <div className={styles.imageFrame}>
-                  <Image
-                    src={product.image}
-                    alt={product.imageAlt ?? product.name}
-                    fill
-                    priority
-                    sizes="(max-width: 900px) 92vw, 460px"
-                    className={styles.image}
-                  />
+                <ProductPhoto
+                  src={img.src}
+                  alt={img.alt}
+                  cdn={img.cdn}
+                  fill
+                  priority
+                  sizes="(max-width: 900px) 92vw, 460px"
+                  className={styles.image}
+                />
                 </div>
               </div>
             )}

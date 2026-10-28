@@ -163,6 +163,15 @@
   margin: 0;
 }
 
+.focusImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+}
+
 @media (max-width: 600px) {
   .bridgeInner {
     flex-direction: column;
