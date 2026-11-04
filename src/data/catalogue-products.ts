@@ -2332,6 +2332,32 @@ export const catalogueProducts: CatalogueProduct[] = [
     cataloguePage: 65,
     reviewNote: '3 - Strength not printed: Strengths NOT printed; pack labelled \'Nutraceutical\'',
   },
+  {
+    slug: 'itrogen-sb-130',
+    name: 'ITROGEN SB 130',
+    highlighted: true,
+    form: 'capsules',
+    description: 'Supra Bioavailable Formulation',
+    compositionBasis: 'Each hard gelatin capsule contains',
+    composition: ['Itraconazole Capsules IP 130 mg'],
+    packs: [{ size: '1 x 10 Capsules', mrp: null, mrpUnit: null }],
+    family: 'itrogen',
+    status: 'published',
+    image: null,
+  },
+  {
+    slug: 'breathlite',
+    name: 'BREATHLITE',
+    highlighted: true,
+    form: 'capsules',
+    description: 'Softgel Capsules — for relief from nasal congestion',
+    composition: ['Camphor 66, Chlorothymol, Eucalyptol, Menthol & Terpineol'],
+    packs: [{ size: '30 x 10 Softgel Capsules', mrp: null, mrpUnit: null }],
+    family: 'breathlite',
+    status: 'published',
+    image: null,
+    reviewNote: 'Strengths not on front of pack; "Camphor 66" copied as printed. Confirm from back label.',
+  },  
 
   // ── LIQUIDS-DRY-SYRUPS ────────────────────────────────
   {

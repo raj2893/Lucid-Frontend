@@ -19,4 +19,13 @@ export const productImageKeys: ReadonlySet<string> = new Set([
   'traximicmf',
   'vildiglipt100sr',
   'vonoluc20',
+  'bitaflox',
+  'bitagesicgel',
+  'bitagesicoil',
+  'breathlite',
+  'cefubit250',
+  'deflabit',
+  'itrogensb130',
+  'ketoc',
+  'valprozia500cr',  
 ]);
