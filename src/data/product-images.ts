@@ -43,4 +43,13 @@ export const productImageKeys: ReadonlySet<string> = new Set([
   'pantolucls',
   'rosugene',
   'safizim200dt',   
+  'bisoprolateam',
+  'glycigen500sr',
+  'itrogen200',
+  'lacoziate200',
+  'raniated',
+  'sultafine375',
+  'tolvabit',
+  'vildigliptm1000',
+  'moxilinecvdrysyrup',
 ]);
